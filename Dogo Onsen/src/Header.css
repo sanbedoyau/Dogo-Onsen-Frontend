@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Noto-Sans';
+  src: url('./assets/fonts/NotoSans-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;font-family: 'Noto-Sans', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
+              url('./assets/img/wood-texture.jpg');
+  background-repeat: repeat-x;
+  background-size: 20% 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw 0 1vw;
+}
+
+.navbar__logo {
+  width: 5vw;
+}
+
+.navbar__options ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  & li a {
+    color: rgba(188, 202, 211, 0.8);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.navbar__btn--login {
+  color: #5c3725;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 1vh 1vw 1vh 2vw;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: rgba(188, 195, 211, 0.8);
+  gap: 1vw;
+
+  &:hover {
+    background-color: #c7d7ed;
+  }
+}
