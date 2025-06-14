@@ -53,3 +53,12 @@
     background-color: #c7d7ed;
   }
 }
+
+.main{
+  display: flow-root;
+  background-image: url("src/assets/img/Onsen.png");
+  background-size: cover;  
+  background-repeat: no-repeat;  
+  background-position: center;  
+  min-height: 100vh;
+}

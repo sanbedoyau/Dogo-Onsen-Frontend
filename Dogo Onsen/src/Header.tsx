@@ -1,5 +1,6 @@
 import onsenLogo from './assets/img/Dogo-Onsen-logo.png'
 import './Header.css'
+import { ServiceCard } from './components/ServiceCard'
 
 function Header() {
 
@@ -19,6 +20,13 @@ function Header() {
           <span id="btn--arrow">&#11167;</span>
         </button>
       </nav>
+      <main className='main'>
+        <section className="services">
+          <ServiceCard title="Baños" />
+          <ServiceCard title="Banquete" description="Disfruta de una variedad de platos tradicionales y modernos." />
+          <ServiceCard title="Jabones" description="Explora nuestra selección de jabones artesanales." />
+        </section>
+      </main>
     </>
   )
 }
