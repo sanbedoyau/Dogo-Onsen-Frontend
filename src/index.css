@@ -6,12 +6,16 @@
 }
 
 * {
-    font-family: 'Noto-Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Noto-Sans', sans-serif;
 }
 
 .navbar {
     background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
               url('./assets/img/wood-texture.jpg');
+    background-repeat: repeat-x;
 }
 
 .main{
