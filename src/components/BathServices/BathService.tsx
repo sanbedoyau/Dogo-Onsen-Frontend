@@ -1,5 +1,4 @@
 import { ServiceCard } from './ServiceCard';
-import './BathService.css';
 
 export function BathServices_Home() {
     return (
