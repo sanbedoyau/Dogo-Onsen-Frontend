@@ -1,19 +1,10 @@
-@font-face {
-  font-family: 'Noto-Sans';
-  src: url('./assets/fonts/NotoSans-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-size: normal;
-}
-
 * {
   padding: 0;
   margin: 0;
-  border: 0;font-family: 'Noto-Sans', sans-serif;
+  border: 0;
 }
 
 .navbar {
-  background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
-              url('./assets/img/wood-texture.jpg');
   background-repeat: repeat-x;
   background-size: 20% 100%;
   display: flex;
@@ -52,13 +43,4 @@
   &:hover {
     background-color: #c7d7ed;
   }
-}
-
-.main{
-  display: flow-root;
-  background-image: url("src/assets/img/Onsen.png");
-  background-size: cover;  
-  background-repeat: no-repeat;  
-  background-position: center;  
-  min-height: 100vh;
 }

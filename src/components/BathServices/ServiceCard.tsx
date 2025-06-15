@@ -1,5 +1,4 @@
 import React from 'react';
-import './ServiceCard.css';
 
 interface ServiceCardProps {
   title: string;

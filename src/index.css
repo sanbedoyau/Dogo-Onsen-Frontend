@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Noto-Sans';
+  src: url('./assets/fonts/NotoSans-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+
+* {
+    font-family: 'Noto-Sans', sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
+              url('./assets/img/wood-texture.jpg');
+}
+
+.main{
+  display: flow-root;
+  background-image: url("src/assets/img/Onsen.png");
+  background-size: cover;  
+  background-repeat: no-repeat;  
+  background-position: center;  
+  min-height: 100vh;
+}
