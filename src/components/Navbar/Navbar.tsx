@@ -1,9 +1,17 @@
+import { useState } from 'react';
+import useOutsideInteraction from '../hooks/useOutsideInteraction';
 import onsenLogo from '../../assets/img/Dogo-Onsen-logo.png';
 import hamburguerBtn from '../../assets/img/BtnHamburguer.png';
 import './Navbar.css';
 import Options from './Options';
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuRef = useOutsideInteraction<HTMLDivElement>(
+    isMenuOpen,
+    () => setIsMenuOpen(false)
+  );
 
   return (
     <>
@@ -11,18 +19,13 @@ export default function Navbar() {
         <img className='navbar__logo' src={ onsenLogo }/>
         <div className='navbar__options--desktop'>
           <Options />
-          <button className='navbar__btn--login'>
-            Log in
-            <span id='btn--arrow'>&#11167;</span>
-          </button>
         </div>
-        <img className='navbar__btn--burger' src={ hamburguerBtn }/>
-        <div className='navbar__options--mobile'>
+        <img 
+          className='navbar__btn--burger' 
+          src={ hamburguerBtn }
+          onClick={ () => setIsMenuOpen(!isMenuOpen) }/>
+        <div ref={ menuRef } className={ `navbar__options--mobile ${isMenuOpen ? 'open': ''}` }>
           <Options />
-          <button className='navbar__btn--login'>
-            Log in
-            <span id='btn--arrow'>&#11167;</span>
-          </button>
         </div>
       </nav>
     </>

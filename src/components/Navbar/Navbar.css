@@ -22,9 +22,13 @@
   cursor: pointer;
   transition: background 0.3s;
   background-color: rgba(188, 195, 211, 0.8);
+}
 
-  &:hover {
-    background-color: #c7d7ed;
+.loginModal {
+  display: none;
+  
+  &.open {
+    display:block;
   }
 }
 
@@ -41,12 +45,14 @@
 
 .navbar__btn--burger {
   display: inline;
-  width: 13vw;
+  width: 10vw;
   padding: 3vw;
+  cursor: pointer;
 }
 
 .navbar__logo {
   width: 15vw;
+  cursor: pointer;
 }
 
 .navbar__options--mobile {
@@ -64,21 +70,19 @@
   }
 }
 
-.navbar__options--mobile ul{
-  list-style: none;
+.navbar__options--mobile .navbar__btn--option {
   display: flex;
-  flex-direction: column;
-  gap: 4vh;
-  margin: 3vh 2vw;
-
-  & li a {
-    color: rgba(188, 202, 211, 0.8);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    &:hover {
-      filter: brightness(1.1);
-    }
+  align-items: flex-start;
+  color: rgba(188, 202, 211, 0.8);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  background: none;
+  transition: background 0.15s ease;
+  padding: 2vh 2vw;
+  &:active {
+    filter: brightness(1.1);
+    background-color: #df3830;
   }
 }
 
@@ -87,6 +91,10 @@
   justify-content: center;
   gap: 2vw;
   font-size: 1.5em;
+  transition: background 0.15s ease;
+  &:active {
+    background-color: #c7d7ed;
+  }
 }
 
 }
@@ -100,7 +108,8 @@
 }
 
 .navbar__logo {
-  width: 5vw;
+  width: 5.5vw;
+  cursor: pointer;
 }
 
 .navbar__options--desktop {
@@ -110,26 +119,23 @@
   gap: 10vw;
 }
 
-.navbar__options--desktop ul{
-  list-style: none;
-  display: flex;
-  gap: 8vw;
-  align-self: center;
-
-  & li a {
-    color: rgba(188, 202, 211, 0.8);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    &:hover {
-      filter: brightness(1.1);
-    }
+.navbar__options--desktop .navbar__btn--option {
+  color: rgba(188, 202, 211, 0.8);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  background: none;
+  &:hover {
+    filter: brightness(1.1);
   }
 }
 
 .navbar__btn--login {
   gap: 1vw;
   font-size: 1.25em;
+  &:hover {
+    background-color: #c7d7ed;
+  }
 }
 
 }
