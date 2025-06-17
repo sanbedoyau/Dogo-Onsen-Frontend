@@ -19,19 +19,67 @@
   display: flex;
   align-items: center;
   padding: 1vh 1vw 1vh 2vw;
-  cursor: pointer;
   transition: background 0.3s;
   background-color: rgba(188, 195, 211, 0.8);
 }
 
 .loginModal {
   display: none;
-  
+  z-index: 2;
+  position: absolute;
+  flex-direction: column;
+  background-color: #e8d3b2;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  margin: 0.5vw 1vw;
+
   &.open {
-    display:block;
+    display: flex;
+    animation: aparecer 0.3s ease-in;
+  }
+  
+  & h3 {
+    text-align: center;
+    margin: -1.5vh 0 1vh 0;
+    color: #381e11;
+  }
+
+  & p {
+    text-align: center;
+    margin: 1vh 0;
+    color: #40261a;
   }
 }
 
+.loginModal__btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.loginModal__btn--close {
+  background: none;
+  font-size: 1.5em;
+  width: auto;
+  height: auto;
+  align-self: flex-end;
+}
+
+.loginModal__btn--login {
+  background: none;
+  color: #5c3725;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.loginModal__btn--signup {
+  border-radius: 100px;
+  margin: 1vh 0;
+  padding: 1vh 1vw;
+  background-color: #5c3725ca;
+  color: #bccad3f0;
+  transition: transform 0.5s ease;
+}
 
 
 /*~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•*/
@@ -47,7 +95,6 @@
   display: inline;
   width: 10vw;
   padding: 3vw;
-  cursor: pointer;
 }
 
 .navbar__logo {
@@ -59,7 +106,7 @@
   display: none;
   flex-direction: column;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   top: 0%;
   left: 70%;
   width: 30%;
@@ -75,7 +122,6 @@
   align-items: flex-start;
   color: rgba(188, 202, 211, 0.8);
   text-decoration: none;
-  cursor: pointer;
   font-size: 1.5em;
   background: none;
   transition: background 0.15s ease;
@@ -90,11 +136,14 @@
   margin: 3vh 2vw;
   justify-content: center;
   gap: 2vw;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   transition: background 0.15s ease;
   &:active {
     background-color: #c7d7ed;
   }
+}
+.loginModal {
+  top: 40%;
 }
 
 }
@@ -122,7 +171,6 @@
 .navbar__options--desktop .navbar__btn--option {
   color: rgba(188, 202, 211, 0.8);
   text-decoration: none;
-  cursor: pointer;
   font-size: 1.5em;
   background: none;
   &:hover {
@@ -138,6 +186,32 @@
   }
 }
 
+.loginModal {
+  top: 10%;
+  right: 1%;
+  width: 20%;
+}
+
+.loginModal__btn--login:hover {
+  color: #4d5e3b;
+  transform: scale(1.05);
+}
+
+.loginModal__btn--signup:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 2px #4d5e3b4f;
+}
 }
 
 /*~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•*/
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}

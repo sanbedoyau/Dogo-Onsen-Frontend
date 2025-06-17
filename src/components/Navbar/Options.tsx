@@ -19,15 +19,15 @@ export default function Options() {
 				<span id='btn--arrow'>&#11167;</span>
 			</button>
 
-			<div ref = { menuRef } className={ `loginModal ${isMenuOpen ? 'open' : ''}` }>
+			<div ref = { menuRef } className={ `loginModal${isMenuOpen ? ' open' : ''}` }>
 				<button className='loginModal__btn--close' onClick={ () => setIsMenuOpen(!isMenuOpen) }>&times;</button>
-				<h3 className='loginModal__Header'>Perfil</h3>
+				<h3>Perfil</h3>
 				<p className='loginModal__content'>
-					Una cuenta permite realizar reservas :)
+					Un perfil permite realizar reservas y mejorar su experiencia
 				</p>
-				<div className='loginModal__btn'>
-					<button className='loginModal__btn--Login'>Iniciar sesión</button>
-					<button className='loginModal__btn--Signup'>Registrarse</button>
+				<div className='loginModal__btns'>
+					<button className='loginModal__btn--login'>Iniciar sesión</button>
+					<button className='loginModal__btn--signup'>Registrarse</button>
 				</div>
 			</div>
 		</>
