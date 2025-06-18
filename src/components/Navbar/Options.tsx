@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import useOutsideInteraction from '../hooks/useOutsideInteraction';
+import { Link } from 'react-router-dom';
 
 export default function Options() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +12,10 @@ export default function Options() {
 	
 	return (
 		<>
-			<button className='navbar__btn--option' id='bañosBtn'>Baños</button>
-			<button className='navbar__btn--option' id='menuBtn'>Menú</button>
-			<button className='navbar__btn--option' id='jabonesBtn'>Jabones</button>
+			<Link to="/" className="navbar__btn--option" id="bañosBtn">Baños</Link>
+			<Link to="/menu" className="navbar__btn--option" id="menuBtn">Menú</Link>
+			<Link to="/jabones" className="navbar__btn--option" id="jabonesBtn">Jabones</Link>
+
 			<button className='navbar__btn--login' onClick={ () => setIsMenuOpen(!isMenuOpen) }>
 				Log in
 				<span id='btn--arrow'>&#11167;</span>
