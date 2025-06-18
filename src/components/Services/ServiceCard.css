@@ -1,3 +1,8 @@
+.main {
+    display: flow-root;
+    min-height: 100vh;
+}
+
 .service-card {
     display: flex;
     margin: 20px;

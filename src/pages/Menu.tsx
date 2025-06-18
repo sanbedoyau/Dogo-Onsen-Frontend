@@ -1,10 +1,10 @@
 // src/components/Menu/Menu.tsx
-import React from 'react';
+import banquete from '../assets/img/banquete.png';
+import nectar from '../assets/img/nectar.jpg'
 import './Menu.css'; // lo creamos en el siguiente paso
-import banquete from '../../assets/img/banquete.png';
-import elixir from '../../assets/img/elixir.jpg';
-import sinfonia from '../../assets/img/sinfonia.jpg';
-import nectar from '../../assets/img/nectar.jpg';
+import elixir from '../assets/img/elixir.jpg';
+import sinfonia from '../assets/img/sinfonia.jpg';
+
 
 const menuItems = [
   {
@@ -18,6 +18,7 @@ const menuItems = [
     descripcion: 'Un delicado té de hierbas, de un verde esmeralda vibrante, en una taza singularmente pintada. El vapor, etéreo y danzarín, evoca la tranquilidad de un jardín escondido en el reino de los espíritus.',
     precio: '$8.000',
     imagen: elixir,
+  
   },
   {
     nombre: 'Sinfonía de Vapor del Balneario',
@@ -30,7 +31,7 @@ const menuItems = [
     descripcion: 'Una bebida fría y refrescante, presentada en un recipiente místico que recuerda los tesoros del balneario. Sus colores vibrantes y el toque de fantasía capturan la esencia mágica de un verano',
     precio: '$5.000',
     imagen: nectar,
-  }
+  },
 ];
 
 export default function Menu() {

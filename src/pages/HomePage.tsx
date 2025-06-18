@@ -1,13 +1,11 @@
 import Navbar from '../components/Navbar/Navbar';
-import { BathServices_Home } from '../components/BathServices/BathService';
+import Services from '../components/Services/Services';
 
 export default function HomePage() {
     return (
         <>
             <Navbar />
-            <main className='main'>
-                <BathServices_Home />
-            </main>
+            <Services />
         </>
     );
 }

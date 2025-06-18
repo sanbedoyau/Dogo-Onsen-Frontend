@@ -1,13 +1,13 @@
 import { ServiceCard } from './ServiceCard';
 
-export function BathServices_Home() {
+export default function Services() {
     return (
 			<>
-				<section className="services">
+				<main className="main">
 					<ServiceCard title="Baños" />
 					<ServiceCard title="Banquete" description="Disfruta de una variedad de platos tradicionales y modernos." />
 					<ServiceCard title="Jabones" description="Explora nuestra selección de jabones artesanales." />
-				</section>
+				</main>
 			</>
     );
 }
