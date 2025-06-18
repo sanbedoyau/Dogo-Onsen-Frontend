@@ -5,14 +5,13 @@
 
 .service-card {
     display: flex;
-    margin: 20px;
-    padding: 16px;
+    margin: 2.5vh 1.5vw;
+    padding: 2.5vh 1.5vw;
     border-radius: 15px;
     background-color: rgba(254, 237, 212, 0.7);
     max-width: 100%;
-    gap: 16px;
+    gap: 1.5vw;
     transition: transform 0.2s ease-in-out;
-
 }
 
 .service-card:hover {
@@ -23,13 +22,30 @@
 .service-card__description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 70%;
 }
 
+.service-card__title {
+    font-size: 4rem;
+    color: #5c3725;
+    margin: 2vh 0;
+}
+
 .service-card__text {
-    color: #000000;
-    margin: 8px 0;
+    color: #5c3725;
+    font-size: 1.5rem;
+    margin: 3vh 0;
+}
+
+.service-card__button {
+    background-color: #d9a482;
+    border: thick double #6f7cb3;
+    outline: 0.3vw solid #d16443;
+    font-family: 'Quicksand', sans-serif;
+    width: auto;
+    align-self: flex-end;
+    padding: 1vh 2vw;
+    margin: auto 3vw 2.5% 0;
 }
 
 .service-card__images {
@@ -45,7 +61,6 @@
     border-radius: 15px;
 }
 
-/* Intento de responsive */
 @media (max-width: 700px) {
     .service-card__images {
         display: none; 
