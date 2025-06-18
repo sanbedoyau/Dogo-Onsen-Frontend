@@ -6,6 +6,8 @@ import elixir from '../assets/img/elixir.jpg';
 import sinfonia from '../assets/img/sinfonia.jpg';
 
 
+
+
 const menuItems = [
   {
     nombre: 'Banquete diario',
