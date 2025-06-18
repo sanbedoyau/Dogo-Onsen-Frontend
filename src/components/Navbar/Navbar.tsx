@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useOutsideInteraction from '../hooks/useOutsideInteraction';
 import onsenLogo from '../../assets/img/Dogo-Onsen-logo.png';
 import hamburguerBtn from '../../assets/img/BtnHamburguer.png';
@@ -16,7 +17,9 @@ export default function Navbar() {
   return (
     <>
       <nav className='navbar'>
-        <img className='navbar__logo' src={ onsenLogo }/>
+        <Link to='/'>
+          <img className='navbar__logo' src={ onsenLogo }/>
+        </Link>
         <div className='navbar__options--desktop'>
           <Options />
         </div>

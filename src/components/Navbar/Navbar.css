@@ -56,6 +56,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 
 .loginModal__btn--close {
@@ -68,6 +69,7 @@
 
 .loginModal__btn--login {
   background: none;
+  text-decoration: none;
   color: #5c3725;
   transition: transform 0.5s ease, color 0.5s ease;
 }
@@ -77,6 +79,7 @@
   margin: 1vh 0;
   padding: 1vh 1vw;
   background-color: #5c3725ca;
+  text-decoration: none;
   color: #bccad3f0;
   transition: transform 0.5s ease;
 }
@@ -206,12 +209,12 @@
 /*~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•*/
 
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0%);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%);
+  }
 }

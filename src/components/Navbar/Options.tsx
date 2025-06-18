@@ -12,7 +12,7 @@ export default function Options() {
 	
 	return (
 		<>
-			<Link to="/" className="navbar__btn--option" id="bañosBtn">Baños</Link>
+			<Link to="/baños" className="navbar__btn--option" id="bañosBtn">Baños</Link>
 			<Link to="/menu" className="navbar__btn--option" id="menuBtn">Menú</Link>
 			<Link to="/jabones" className="navbar__btn--option" id="jabonesBtn">Jabones</Link>
 
@@ -28,8 +28,8 @@ export default function Options() {
 					Un perfil permite realizar reservas y mejorar su experiencia
 				</p>
 				<div className='loginModal__btns'>
-					<button className='loginModal__btn--login'>Iniciar sesión</button>
-					<button className='loginModal__btn--signup'>Registrarse</button>
+					<Link to='/login' className='loginModal__btn--login'>Iniciar sesión</Link>
+					<Link to='/signup' className='loginModal__btn--signup'>Registrarse</Link>
 				</div>
 			</div>
 		</>
