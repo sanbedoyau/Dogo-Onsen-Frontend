@@ -1,5 +1,5 @@
 
-.jabon-container {
+.baños-container {
   background-image: url('../assets/img/Onsen.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   align-items: center;
   backdrop-filter: brightness(0.95);
 }
-.jabon-title {
+.baños-title {
     font-size: 2.7rem;
     font-family: 'Noto Serif JP', 'Georgia', serif;
     margin-bottom: 40px;
@@ -26,7 +26,7 @@
     border-radius: 8px;
 }
 
-.jabon-grid {
+.baños-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,7 +36,7 @@
     
 }
 
-.jabon-card {
+.baños-card {
     width: 260px;
     height: 320px;
     perspective: 1000px;
@@ -46,11 +46,11 @@
     background: linear-gradient(120deg, #fff8f055 80%, #ffe8d6d3 100%);
     transition: box-shadow 0.3s;
 }
-.jabon-card:hover {
+.baños-card:hover {
     box-shadow: 0 12px 32px rgba(176,58,46,0.22);
 }
 
-.jabon-card-inner {
+.baños-card-inner {
     width: 100%;
     height: 100%;
     transition: transform 0.8s;
@@ -58,11 +58,11 @@
     position: relative;
 }
 
-.jabon-card:hover .jabon-card-inner {
+.baños-card:hover .baños-card-inner {
     transform: rotateY(180deg);
 }
 
-.jabon-card-front img {
+.baños-card-front img {
     width: 80%;
     max-height: 170px;
     margin-bottom: 15px;
@@ -71,7 +71,7 @@
 
 }
 
-.jabon-card-front {
+.baños-card-front {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -81,20 +81,20 @@
     align-items: center;
     justify-content: center;
 }
-.jabon-card-front h3 {
+.baños-card-front h3 {
     font-size: 1.7rem;
     font-family: 'Noto Serif JP', 'Georgia', serif;
     color: #280f06;
     margin-bottom: 0.5rem;
 }
-.jabon-card-back p {
+.baños-card-back p {
     padding: 0 1rem;
     font-size: 1.7rem;
     text-align: center;
     line-height: 1.4;
     color: #130804;
 }
-.jabon-card-front strong {
+.baños-card-front strong {
     color: #0f0702; /* Cambia este color a tu gusto */
     font-size: 1.2rem;
     margin-top: 0.5rem;
@@ -102,7 +102,7 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
-.jabon-card-back {
+.baños-card-back {
     transform: rotateY(180deg);
     background: rgba(255, 232, 214, 0.373);
     backface-visibility: hidden;
@@ -112,14 +112,14 @@
 }
 
 @media (max-width: 600px) {
-    .jabon-grid {
+    .baños-grid {
         gap: 1.2rem;
     }
-    .jabon-card {
+    .baños-card {
         width: 90vw;
         height: 250px;
     }
-    .jabon-title {
+    .baños-title {
         font-size: 2rem;
     }
 }

@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import Menu from './pages/Menu';
 import NotFoundError from './pages/NotFoundError';
 import Jabones from './pages/Jabones';
+import Baños from './pages/Baños';
 
 export default function App() {
     return (
@@ -11,6 +12,7 @@ export default function App() {
                 <Route path='/' element={ <HomePage /> } />
                 <Route path='/menu' element={ <Menu /> } />
                 <Route path='/jabones' element={ <Jabones /> } />
+                <Route path='/baños' element={ <Baños /> } />
                 <Route path='*' element={ <NotFoundError /> } />
             </Routes>
         </Router>
