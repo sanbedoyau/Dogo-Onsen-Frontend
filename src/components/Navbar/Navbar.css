@@ -13,6 +13,10 @@
   display: none;
 }
 
+.navbar__btn--option {
+  text-decoration: none;
+}
+
 .navbar__btn--login {
   color: #5c3725;
   border-radius: 100px;
@@ -69,8 +73,8 @@
 
 .loginModal__btn--login {
   background: none;
-  text-decoration: none;
   color: #5c3725;
+  text-decoration: none;
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
@@ -79,8 +83,8 @@
   margin: 1vh 0;
   padding: 1vh 1vw;
   background-color: #5c3725ca;
-  text-decoration: none;
   color: #bccad3f0;
+  text-decoration: none;
   transition: transform 0.5s ease;
 }
 
@@ -124,7 +128,6 @@
   display: flex;
   align-items: flex-start;
   color: rgba(188, 202, 211, 0.8);
-  text-decoration: none;
   font-size: 1.5em;
   background: none;
   transition: background 0.15s ease;
@@ -173,7 +176,6 @@
 
 .navbar__options--desktop .navbar__btn--option {
   color: rgba(188, 202, 211, 0.8);
-  text-decoration: none;
   font-size: 1.5em;
   background: none;
   &:hover {

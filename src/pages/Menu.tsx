@@ -4,6 +4,7 @@ import nectar from '../assets/img/nectar.jpg'
 import './Menu.css'; // lo creamos en el siguiente paso
 import elixir from '../assets/img/elixir.jpg';
 import sinfonia from '../assets/img/sinfonia.jpg';
+import Navbar from '../components/Navbar/Navbar';
 
 
 
@@ -38,18 +39,21 @@ const menuItems = [
 
 export default function Menu() {
   return (
-    <div className="menu-container">
-      <h2 className="menu-title">Menú del Balneario</h2>
-      <div className="menu-grid">
-        {menuItems.map((item, index) => (
-          <div className="menu-card" key={index}>
-            <img src={item.imagen} alt={item.nombre} />
-            <h3>{item.nombre}</h3>
-            <p>{item.descripcion}</p>
-            <strong>{item.precio}</strong>
-          </div>
-        ))}
+    <>
+      <Navbar />
+      <div className="menu-container">
+        <h2 className="menu-title">Menú del Balneario</h2>
+        <div className="menu-grid">
+          {menuItems.map((item, index) => (
+            <div className="menu-card" key={index}>
+              <img src={item.imagen} alt={item.nombre} />
+              <h3>{item.nombre}</h3>
+              <p>{item.descripcion}</p>
+              <strong>{item.precio}</strong>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
