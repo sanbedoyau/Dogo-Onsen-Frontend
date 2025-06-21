@@ -6,8 +6,9 @@ interface ServiceCardProps {
   description?: string;
   images?: string[];
   link?: string;
+  buttonText?: string;
 }
-export const ServiceCard = ({ title, description = "Sin descripción disponible.", images = Array(4).fill("src/assets/img/no-image.jpg"), link = '/'}: ServiceCardProps) => {
+export const ServiceCard = ({ title, description = "Sin descripción disponible.", images = Array(4).fill("src/assets/img/no-image.jpg"), link = '/', buttonText = "Ver más"}: ServiceCardProps) => {
   return (
     <div className="service-card">
         <div className="service-card__images">
@@ -16,7 +17,7 @@ export const ServiceCard = ({ title, description = "Sin descripción disponible.
         <div className="service-card__description">
             <h3 className="service-card__title">{title}</h3>
             <p className="service-card__text">{description}</p>
-            <Link to={link} className="service-card__button">Ver más</Link>
+            <Link to={link} className="service-card__button">{buttonText}</Link>
         </div>
     </div>
   );
