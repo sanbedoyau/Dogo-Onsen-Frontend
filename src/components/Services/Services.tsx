@@ -1,5 +1,5 @@
 import { ServiceCard } from './ServiceCard';
-
+import './Services.css'
 
 export default function Services() {
 	const BañosImages = [
