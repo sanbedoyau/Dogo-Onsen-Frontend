@@ -4,10 +4,12 @@ import Menu from './pages/Menu';
 import NotFoundError from './pages/NotFoundError';
 import Jabones from './pages/Jabones';
 import Baños from './pages/Baños';
+import ScrollToTop from './components/hooks/scrollToTop';
 
 export default function App() {
     return (
         <Router>
+            <ScrollToTop/>  
             <Routes>
                 <Route path='/' element={ <HomePage /> } />
                 <Route path='/menu' element={ <Menu /> } />
