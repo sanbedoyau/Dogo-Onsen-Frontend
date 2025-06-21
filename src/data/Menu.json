@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Banquete diario",
+    "descripcion": "Fideos artesanales en caldo miso con vegetales frescos.",
+    "precio": "$60 Dragas",
+    "imagen": "src/assets/img/banquete.png"
+  },
+  {
+    "nombre": "Elixir de Té Verde",
+    "descripcion": "Un delicado té de hierbas, de un verde esmeralda vibrante, en una taza singularmente pintada. El vapor, etéreo y danzarín, evoca la tranquilidad de un jardín escondido en el reino de los espíritus.",
+    "precio": "$8 Dragas",
+    "imagen": "src/assets/img/elixir.jpg"
+  },
+  {
+    "nombre": "Sinfonía de Vapor del Balneario",
+    "descripcion": "Una acogedora selección de tés y cafés, servidos en tazas artesanales. El vapor se eleva como un suave susurro mágico, invitando a la calma en cualquier rincón de tu página.",
+    "precio": "$6 Dragas",
+    "imagen": "src/assets/img/sinfonia.jpg"
+  },
+  {
+    "nombre": "Néctar Glacial del Río Dragón",
+    "descripcion": "Una bebida fría y refrescante, presentada en un recipiente místico que recuerda los tesoros del balneario. Sus colores vibrantes y el toque de fantasía capturan la esencia mágica de un verano",
+    "precio": "$5 Dragas",
+    "imagen": "src/assets/img/nectar.jpg"
+  }
+]

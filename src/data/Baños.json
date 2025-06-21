@@ -1,0 +1,32 @@
+    [
+    {
+        "nombre": "Baño de Vapor termal del loto silencioso",
+        "descripcion": "Un baño revitalizante que despeja las vías respiratorias y relaja los músculos.",
+        "precio": "$30 Dragas",
+        "imagen": "src/assets/img/baño_loto.jpg"
+    },
+    {
+        "nombre": "Baño termal de luna de media noche",
+        "descripcion": "Un baño aromático que envuelve el cuerpo en fragancias florales y naturales.",
+        "precio": "$28 Dragas",
+        "imagen": "src/assets/img/baño_luna.jpg"
+    },
+    {
+        "nombre": "Baño termal escama de dragón",
+        "descripcion": "Un baño que utiliza arcilla especial para desintoxicar la piel y relajar la mente.",
+        "precio": "$32 Dragas",
+        "imagen": "src/assets/img/baño_dragon.jpg"
+    },
+    {
+        "nombre": "Baño termal hierbas del hechicero",
+        "descripcion": "Un baño hidratante que suaviza la piel y proporciona una experiencia de spa en casa.",
+        "precio": "$35 Dragas",
+        "imagen": "src/assets/img/baño_hechizo.jpg"
+    },
+    {
+        "nombre": "Baño de las almas perdidas",
+        "descripcion": "Un baño que combina hierbas y aceites esenciales para una experiencia relajante.",
+        "precio": "$25 Dragas",
+        "imagen": "src/assets/img/baño_almas.jpg"
+    }
+]

@@ -1,39 +1,8 @@
-// src/components/Menu/Menu.tsx
-import banquete from '../assets/img/banquete.png';
-import nectar from '../assets/img/nectar.jpg'
-import './Menu.css'; 
-import elixir from '../assets/img/elixir.jpg';
-import sinfonia from '../assets/img/sinfonia.jpg';
+import './Menu.css';
 import Navbar from '../components/Navbar/Navbar';
+import menuJson from '../data/Menu.json';
 
-
-const menuItems = [
-  {
-    nombre: 'Banquete diario',
-    descripcion: 'Fideos artesanales en caldo miso con vegetales frescos.',
-    precio: '$60 Dragas',
-    imagen: banquete,
-  },
-  {
-    nombre: 'Elixir de Té Verde',
-    descripcion: 'Un delicado té de hierbas, de un verde esmeralda vibrante, en una taza singularmente pintada. El vapor, etéreo y danzarín, evoca la tranquilidad de un jardín escondido en el reino de los espíritus.',
-    precio: '$8 Dragas',
-    imagen: elixir,
-  
-  },
-  {
-    nombre: 'Sinfonía de Vapor del Balneario',
-    descripcion: 'Una acogedora selección de tés y cafés, servidos en tazas artesanales.    El vapor se eleva como un suave susurro mágico, invitando a la calma en cualquier rincón de tu página.',
-    precio: '$6 Dragas',
-    imagen: sinfonia,
-  },
-  {
-    nombre: 'Néctar Glacial del Río Dragón',
-    descripcion: 'Una bebida fría y refrescante, presentada en un recipiente místico que recuerda los tesoros del balneario. Sus colores vibrantes y el toque de fantasía capturan la esencia mágica de un verano',
-    precio: '$5 Dragas',
-    imagen: nectar,
-  },
-];
+const menuItems = menuJson as any[];  // Este se puede cambiar si queremos agregar tipos a algo como Menu[]
 
 export default function Menu() {
   return (

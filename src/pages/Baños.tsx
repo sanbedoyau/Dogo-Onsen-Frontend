@@ -1,44 +1,10 @@
-import bañoLoto from '../assets/img/baño_loto.jpg';
-import bañoLuna from '../assets/img/baño_luna.jpg';
-import bañoDragon from '../assets/img/baño_dragon.jpg';
-import bañoHechicero from '../assets/img/baño_hechizo.jpg';
-import bañoAlmas from '../assets/img/baño_almas.jpg';
 import "../pages/Baños.css";
 import Navbar from "../components/Navbar/Navbar";
+import bañosJson from "../data/Baños.json" 
+
+const bañosItems = bañosJson as any[]; // Este se puede cambiar si queremos agregar tipos a algo como Baños[]
 
 
-const bañosItems = [
-    {
-        nombre: 'Baño de Vapor termal del loto silencioso',
-        descripcion: 'Un baño revitalizante que despeja las vías respiratorias y relaja los músculos.',
-        precio: '$30 Dragas',
-        imagen: bañoLoto,
-    },
-    {
-        nombre: 'Baño termal de luna de media noche',
-        descripcion: 'Un baño aromático que envuelve el cuerpo en fragancias florales y naturales.',
-        precio: '$28 Dragas',
-        imagen: bañoLuna,
-    },
-    {
-        nombre: 'Baño termal escama de dragón',
-        descripcion: 'Un baño que utiliza arcilla especial para desintoxicar la piel y relajar la mente.',
-        precio: '$32 Dragas',
-        imagen: bañoDragon,
-    },
-    {
-        nombre: 'termales hierbas del hechicero',
-        descripcion: 'Un baño hidratante que suaviza la piel y proporciona una experiencia de spa en casa.',
-        precio: '$35 Dragas',
-        imagen: bañoHechicero,
-    },
-    {
-        nombre: 'Baño de las almas perdidas',
-        descripcion: 'Un baño que combina hierbas y aceites esenciales para una experiencia relajante.',
-        precio: '$25 Dragas',
-        imagen: bañoAlmas,
-    },
-];
 export default function Baños() {
   return (
     <>
