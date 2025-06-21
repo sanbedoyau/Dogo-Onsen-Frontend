@@ -22,7 +22,7 @@ export default function Options() {
 			</button>
 
 			<div ref = { menuRef } className={ `loginModal${isMenuOpen ? ' open' : ''}` }>
-				<button className='loginModal__btn--close' onClick={ () => setIsMenuOpen(!isMenuOpen) }>&times;</button>
+				<button className='loginModal__btn--close' onClick={ () => setIsMenuOpen(false) }>&times;</button>
 				<h3>Perfil</h3>
 				<p className='loginModal__content'>
 					Un perfil permite realizar reservas y mejorar su experiencia

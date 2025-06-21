@@ -5,7 +5,8 @@
 
 .service-card {
     display: flex;
-    margin: 2.5vh 1.5vw;
+    margin: 2.5vh 4vw;
+    align-items: center;
     padding: 2.5vh 1.5vw;
     border-radius: 15px;
     background-color: rgba(254, 237, 212, 0.7);
@@ -38,6 +39,8 @@
 }
 
 .service-card__button {
+    text-decoration: none;
+    color: black;
     background-color: #d9a482;
     border: thick double #6f7cb3;
     outline: 0.3vw solid #d16443;

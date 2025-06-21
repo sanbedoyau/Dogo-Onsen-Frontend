@@ -1,13 +1,13 @@
-import React from 'react';
-import './ServiceCard.css';
-
+import { Link } from 'react-router';
+import './ServiceCard.css'
 
 interface ServiceCardProps {
   title: string;
   description?: string;
   images?: string[];
+  link?: string;
 }
-export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description = "Sin descripción disponible.", images = Array(4).fill("src/assets/img/no-image.jpg") }) => {
+export const ServiceCard = ({ title, description = "Sin descripción disponible.", images = Array(4).fill("src/assets/img/no-image.jpg"), link = '/'}: ServiceCardProps) => {
   return (
     <div className="service-card">
         <div className="service-card__images">
@@ -16,7 +16,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description = "
         <div className="service-card__description">
             <h3 className="service-card__title">{title}</h3>
             <p className="service-card__text">{description}</p>
-            <button className="service-card__button">Ver más</button>
+            <Link to={link} className="service-card__button">Ver más</Link>
         </div>
     </div>
   );
