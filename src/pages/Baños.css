@@ -40,11 +40,13 @@
     width: 260px;
     height: 320px;
     perspective: 1000px;
+    text-align: center;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(154, 53, 42, 0.13);
     border: 2px solid #e7e9e500;
     background: linear-gradient(120deg, #fff8f055 80%, #ffe8d6d3 100%);
     transition: box-shadow 0.3s;
+    padding: 0.2rem;
 }
 .baños-card:hover {
     box-shadow: 0 12px 32px rgba(176,58,46,0.22);
@@ -60,6 +62,12 @@
 
 .baños-card:hover .baños-card-inner {
     transform: rotateY(180deg);
+}
+.baños-card-back{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 18px;
 }
 
 .baños-card-front img {
@@ -79,7 +87,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .baños-card-front h3 {
     font-size: 1.7rem;
@@ -108,7 +115,7 @@
     backface-visibility: hidden;
     font-size: 1.05rem;
     color: #280f06;
-    border: 1.5px dashed #b03a2e;
+    border: 3px dashed #b03a2e;
 }
 
 @media (max-width: 600px) {
