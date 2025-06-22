@@ -7,19 +7,26 @@ import Baños from './pages/Baños';
 import useScrollToTop from './components/hooks/useScrollToTop';
 import SignUp from './pages/signUp';
 
-export default function App() {
+function AppRoutes() {
     useScrollToTop();
 
     return (
+        <Routes>
+            <Route path='/' element={ <HomePage /> } />
+            <Route path='/menu' element={ <Menu /> } />
+            <Route path='/jabones' element={ <Jabones /> } />
+            <Route path='/baños' element={ <Baños /> } />
+            <Route path='/signup' element={ <SignUp /> } />
+            <Route path='*' element={ <NotFoundError /> } />
+        </Routes>
+    );
+}
+
+export default function App() {
+
+    return (
         <Router>
-            <Routes>
-                <Route path='/' element={ <HomePage /> } />
-                <Route path='/menu' element={ <Menu /> } />
-                <Route path='/jabones' element={ <Jabones /> } />
-                <Route path='/baños' element={ <Baños /> } />
-                <Route path='/signup' element={ <SignUp /> } />
-                <Route path='*' element={ <NotFoundError /> } />
-            </Routes>
+            <AppRoutes />
         </Router>
     );
 }
