@@ -7,8 +7,7 @@ export default function NotFoundError() {
         'baños',
         'jabones',
         'login',
-  
-
+        'signup'
     ]);
 
     return isCurrentBuilding ? <UnderBuilding /> : <NotFound />;

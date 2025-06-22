@@ -5,7 +5,8 @@ import NotFoundError from './pages/NotFoundError';
 import Jabones from './pages/Jabones';
 import Baños from './pages/Baños';
 import useScrollToTop from './components/hooks/useScrollToTop';
-import SignUp from './pages/signUp';
+import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn';
 
 function AppRoutes() {
     useScrollToTop();
@@ -16,6 +17,7 @@ function AppRoutes() {
             <Route path='/menu' element={ <Menu /> } />
             <Route path='/jabones' element={ <Jabones /> } />
             <Route path='/baños' element={ <Baños /> } />
+            <Route path='/login' element={ <LogIn /> } />
             <Route path='/signup' element={ <SignUp /> } />
             <Route path='*' element={ <NotFoundError /> } />
         </Routes>

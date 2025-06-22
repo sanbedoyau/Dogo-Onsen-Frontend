@@ -23,6 +23,20 @@ button {
   cursor: pointer;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+}
+
 .navbar {
     background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
               url('./assets/img/wood-texture.jpg');
