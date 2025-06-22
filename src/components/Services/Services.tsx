@@ -44,9 +44,9 @@ export default function Services() {
 			<>
 				<main className="main">
 
-					<ServiceCard title="Baños" images={BañosImages} description={BañosDescription} link='/baños' />
-					<ServiceCard title="Banquete" images={BanqueteImages} description={BanqueteDescription} link='/menu' />
-					<ServiceCard title="Jabones" images={JabonesImages} description={JabonesDescription} link='/jabones' />
+					<ServiceCard title="Baños" images={BañosImages} description={BañosDescription} link='/baños' buttonText='Ver más' />
+					<ServiceCard title="Banquete" images={BanqueteImages} description={BanqueteDescription} link='/menu' buttonText='Ver más' />
+					<ServiceCard title="Jabones" images={JabonesImages} description={JabonesDescription} link='/jabones' buttonText='Ver más' />
 				</main>
 			</>
     );
