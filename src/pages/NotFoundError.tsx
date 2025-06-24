@@ -4,10 +4,7 @@ import useIsPageOnBuilding from '../components/hooks/useIsPageOnBuilding';
 
 export default function NotFoundError() {
     const isCurrentBuilding = useIsPageOnBuilding([
-        'baños',
-        'jabones',
-        'login',
-        'signup'
+        'politicas'
     ]);
 
     return isCurrentBuilding ? <UnderBuilding /> : <NotFound />;

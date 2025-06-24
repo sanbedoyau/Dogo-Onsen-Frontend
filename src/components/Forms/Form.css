@@ -82,6 +82,11 @@
     }
 }
 
+.Form__error {
+    color: red;
+}
+
+
 .alreadyHave {
     display: flex;
     flex-wrap: wrap;

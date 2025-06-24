@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useOutsideInteraction from '../hooks/useOutsideInteraction';
 import onsenLogo from '../../assets/img/Dogo-Onsen-logo.png';
-import hamburguerBtn from '../../assets/img/BtnHamburguer.png';
-import './Navbar.css';
 import Options from './Options';
+import LogInBtn from './LogInBtn';
+import ProfileBtn from './ProfileBtn';
+import './Navbar.css';
 
 export default function Navbar() {
+  const user = JSON.parse(localStorage.getItem('loggedUser') || 'null');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuRef = useOutsideInteraction<HTMLDivElement>(
@@ -22,13 +24,14 @@ export default function Navbar() {
         </Link>
         <div className='navbar__options--desktop'>
           <Options />
+          {!user ? <LogInBtn /> : <ProfileBtn isPhone={false}/>}
         </div>
-        <img 
-          className='navbar__btn--burger' 
-          src={ hamburguerBtn }
+        <i 
+          className='navbar__btn--burger fa-solid fa-bars icon'
           onClick={ () => setIsMenuOpen(!isMenuOpen) }/>
         <div ref={ menuRef } className={ `navbar__options--mobile ${isMenuOpen ? 'open': ''}` }>
           <Options />
+          {!user ? <LogInBtn /> : <ProfileBtn isPhone={true}/>}
         </div>
       </nav>
     </>

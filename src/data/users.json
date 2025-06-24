@@ -1,0 +1,14 @@
+[
+    {
+        "email": "admin@dogoonsen.com",
+        "password": "1234",
+        "nombre": "Alejandra",
+        "role": "admin"
+    },
+    {
+        "email": "client@gmail.com",
+        "password": "1234",
+        "nombre": "Diego",
+        "role": "client"
+    }
+]

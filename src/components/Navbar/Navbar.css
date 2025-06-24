@@ -17,7 +17,7 @@
   text-decoration: none;
 }
 
-.navbar__btn--login {
+.navbar__notLogged--btn {
   color: #5c3725;
   border-radius: 100px;
   display: flex;
@@ -55,6 +55,17 @@
   }
 }
 
+.navbar__notLogged--btn {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: rgba(188, 202, 211, 0.9);
+  cursor: pointer;
+}
+
 .loginModal__btns {
   display: flex;
   flex-direction: row;
@@ -86,6 +97,53 @@
   color: #bccad3f0;
   text-decoration: none;
   transition: transform 0.5s ease;
+}
+
+.profile-modal {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  flex-direction: column;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  margin: 0.5vw 1vw;
+  background-color: #eaeff1f0;
+
+  &.open {
+    display: flex;
+    animation: aparecer 0.3s ease;
+  }
+}
+
+.profileModal__btn--close {
+  align-self: flex-end;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.profileModal__btn {
+  text-decoration: none;
+  color: #5c3725;
+  width: 100%;
+  transition: color 0.3s ease,
+              background-color 0.3s ease;
+  padding: 0.25rem;
+  margin: 0.5rem 1rem 0 0;
+  border-radius: 8px;
+}
+
+.profileModal__btn--closeSession {
+  align-self: center;
+  background-color: #5c3725;
+  color: #acb8bff0;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 100px;
 }
 
 
@@ -138,7 +196,7 @@
   }
 }
 
-.navbar__btn--login {
+.navbar__notLogged--btn {
   margin: 3vh 2vw;
   justify-content: center;
   gap: 2vw;
@@ -150,6 +208,37 @@
 }
 .loginModal {
   top: 40%;
+}
+
+.profileBtn {
+  gap: 1vw;
+  align-self: center;
+  font-size: 1.25rem;
+  color: #40261a;
+  width: fit-content;
+  padding: 0.3rem 0.5rem;
+  border-radius: 100px;
+  & > i {
+    font-size: 1.1rem;
+  }
+}
+
+.profile-modal {
+  right: 2.5vw;
+  top: 40%;
+}
+
+.profileModal__btn {
+  &:active {
+    color: #92573a;
+    background-color: #e2ecf0;
+  }
+}
+
+.profileModal__btn--closeSession {
+  &:active {
+    background-color: #7b4a31;
+  }
 }
 
 }
@@ -183,7 +272,7 @@
   }
 }
 
-.navbar__btn--login {
+.navbar__notLogged--btn {
   gap: 1vw;
   font-size: 1.25em;
   &:hover {
@@ -206,6 +295,25 @@
   transform: scale(1.05);
   box-shadow: 0 0 10px 2px #4d5e3b4f;
 }
+
+.profile-modal {
+  right: 1vw;
+  top: 10vh;
+}
+
+.profileModal__btn {
+  &:hover {
+    color: #92573a;
+    background-color: #e2ecf0;
+  }
+}
+
+.profileModal__btn--closeSession {
+  &:hover {
+    background-color: #7b4a31;
+  }
+}
+
 }
 
 /*~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•~•*/
