@@ -6,7 +6,7 @@ import "../pages/AdminOptions.css";
 export default function AdminOptions() {
 
     const adminOptions = [
-        { title: "Gestion de Baños", link: "/admin/baños"},
+        { title: "Gestion de Baños", link: "/gestionbaños"},
         { title: "Gestion de Jabones", link: "/admin/jabones" },
         { title: "Gestion de Usuarios", link: "/admin/usuarios" },
         { title: "Gestion de Menu", link: "/admin/menu" },
@@ -17,36 +17,26 @@ export default function AdminOptions() {
     return (
         <>
         <Navbar/>
-        <div className="main">
-         <div className="admin-options__container">
-            <h1 className="admin-options__title">Gestion de servicios</h1>
-            <div className="admin-options__content">
-                {
-                adminOptions.map((item, i) => (
-                    <Link to={item.link} className="admin-options__link" key={i}>
-                        <ServiceCard title={item.title} images={["src/assets/img/NotFoundIcon.png"]} />
-                    </Link>
-                ))}
-            </div>
-         </div>
-        {/* <div className="admin-options__sidebar">
-            <h2 className="admin-options__sidebar-title">Opciones adicionales</h2>
-            <ul className="admin-options__sidebar-list">
-                {
+        <div className="admin-options">
+            <div className ="admin-options__content"></div>
+            <div className="admin-options__sidebar">
+                <h2 className="admin-options__sidebar-title">Opciones</h2>
+                <ul className="admin-options__sidebar-list">
+                    {
                     adminOptions.map((item, i) => (
                         <li className="admin-options__sidebar-item" key={i}>
                             <Link to={item.link} className="admin-options__sidebar-link">{item.title}</Link>
                         </li>
-                    ))
-                }
-                <li className="admin-options__sidebar-item">
-                    <Link to="/admin/reportes" className="admin-options__sidebar-link">Generar Reportes</Link>
-                </li>
-                <li className="admin-options__sidebar-item">
-                    <Link to="/admin/configuracion" className="admin-options__sidebar-link">Configuración</Link>
-                </li>
-            </ul>
-        </div> */}
+                        ))
+                    }
+                    {/* <li className="admin-options__sidebar-item">
+                        <Link to="/admin/reportes" className="admin-options__sidebar-link">Generar Reportes</Link>
+                    </li>
+                    <li className="admin-options__sidebar-item">
+                        <Link to="/admin/configuracion" className="admin-options__sidebar-link">Configuración</Link>
+                    </li> */}
+                </ul>
+            </div>
         </div>
         </>
     );
