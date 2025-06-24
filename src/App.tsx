@@ -7,6 +7,7 @@ import Baños from './pages/Baños';
 import useScrollToTop from './components/hooks/useScrollToTop';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
+import ProfilePage from './pages/ProfilePage';
 
 function AppRoutes() {
     useScrollToTop();
@@ -14,6 +15,7 @@ function AppRoutes() {
     return (
         <Routes>
             <Route path='/' element={ <HomePage /> } />
+            <Route path='/profile' element={ <ProfilePage /> } />
             <Route path='/menu' element={ <Menu /> } />
             <Route path='/jabones' element={ <Jabones /> } />
             <Route path='/baños' element={ <Baños /> } />

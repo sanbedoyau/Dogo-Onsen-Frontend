@@ -2,13 +2,19 @@
     {
         "email": "admin@dogoonsen.com",
         "password": "1234",
-        "nombre": "Alejandra",
+        "name": "Alejandra",
+        "type":"Humano",
+        "imageUrl": "/src/assets/img/no-image.jpg",
+        "description": "Soy una persona que ama los perros y la tecnología.",
         "role": "admin"
     },
     {
         "email": "client@gmail.com",
         "password": "1234",
-        "nombre": "Diego",
+        "name": "Diego",
+        "type":"Humano",
+        "imageUrl": "/src/assets/img/no-image.jpg",
+        "description": "Soy un cliente que ama los gatos.",
         "role": "client"
     }
 ]
