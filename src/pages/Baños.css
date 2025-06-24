@@ -63,12 +63,15 @@
 .baños-card:hover .baños-card-inner {
     transform: rotateY(180deg);
 }
-.baños-card-back{
-    display: flex;
-    align-items: center;
+.baños-card-back {
+    overflow-y: auto;
+    box-sizing: border-box;
     height: 100%;
     border-radius: 18px;
+    padding: 1rem;
+    background-color: #f8f8f8; /* opcional para contraste */
 }
+
 
 .baños-card-front img {
     width: 80%;
