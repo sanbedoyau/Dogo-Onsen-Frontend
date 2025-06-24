@@ -1,0 +1,36 @@
+.profile__reservations{
+    /* flex:2; */
+    background-color: rgba(186, 200, 209,0.95);
+    padding: 1.5em;
+    box-sizing: border-box;
+    /* width: 70%; */
+    border-radius: 10px;
+    height: 40%;
+}
+
+.profile__reservations-container{
+    display:flex;
+    gap: 0.5em;
+
+    padding: 1em;
+    
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    scrollbar-width: auto; /* For Firefox */
+    scrollbar-color: #797878 rgba(0, 0, 0, 0); 
+}
+
+.profile__reservation-card{
+
+    background-color: rgb(108, 99, 88);
+    min-width: 200px;
+
+    border-radius: 10px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

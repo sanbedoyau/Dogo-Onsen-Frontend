@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-layout{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding:0.2em;
+    gap: 0.2rem;
+    background-image: url("/src/assets/img/no-image.jpg");
+    background-size: cover;
+
+}
+
+.profile{
+    /* flex:7; */
+    /* background-color: rgba(214, 46, 184, 0.95); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 70%;   
+    /* box-sizing: border-box; */
+    gap: 0.2rem;
+}
+
+.profile__content{
+    /* flex:3; */
+    display:flex;
+    background-color: rgba(186, 200, 209,0.95);
+    padding: 3rem;
+    border-radius: 10px;
+    align-items: center;
+    height: 60%;
+
+}
+
+
+.profile__info{
+    display: flex;
+    /* background-color: rgba(202, 70, 209, 0.95); */
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+    margin-left: 1rem;
+    height: 100%;
+    width: 100%;    
+    /* overflow: hidden;    */
+}
+ 
+.profile__image{
+
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    
+}
+
+.profile__name{
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+
+    width: 100%;
+}
+
+.profile__type{
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.profile__email{
+    font-size: 1.5rem;
+    color: #2c1d61;
+    margin-bottom: 1rem;
+}
+
+.profile__edit-button{
+    background-color: rgb(171, 71, 49);/* Green */
+    /* border: none; */
+    color: white;
+    padding: 10px 20px; 
+    font-size: 12px;
+    border-radius: 5px;
+    width: fit-content;
+    align-self: end;
+    margin-top: auto;
+}
+
+.profile__description {
+    /* background-color: rgba(202, 70, 209, 0.95); */
+    border-radius: 10px;
+    border: 2px solid rgba(102, 102, 102,0.5);
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 100%;
+    margin-bottom: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #040404 rgba(0, 0, 0, 0); 
+}
+
+@media (max-width: 1000px){
+    .profile-layout{
+        height: auto;
+    }
+
+    .profile{
+        height: auto;
+    }
+    
+    .profile__content {
+        flex-wrap: wrap;
+        height: 750px;
+        justify-content: center;
+    }
+    .profile__info{
+        width: 100%;
+        margin-left: 0px;
+        padding: 1rem;
+        height: 50%;
+        text-align: center;
+    }
+    .profile__description {
+        margin: 1rem 0;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .profile{
+        width: 100%;
+    }
+    .profile-layout {
+        flex-direction: column;
+    }
+}
