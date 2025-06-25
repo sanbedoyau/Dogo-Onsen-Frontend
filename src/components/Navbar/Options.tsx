@@ -19,7 +19,7 @@ export default function Options({ isAuthenticated }: { isAuthenticated: boolean 
 			<Link to="/menu" className="navbar__btn--option" id="menuBtn">Menú</Link>
 			<Link to="/jabones" className="navbar__btn--option" id="jabonesBtn">Jabones</Link>
 
-			{/* ✅ Mostrar solo si está autenticado */}
+			{/* Mostrar solo si está autenticado */}
 			{isAuthenticated && (
 				<Link to="/reservar" className="navbar__btn--option" id="reservarBtn">
 					Reservar

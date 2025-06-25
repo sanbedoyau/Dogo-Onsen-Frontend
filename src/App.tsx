@@ -10,6 +10,7 @@ import LogIn from './pages/LogIn';
 import Profile from './components/Profile/Profile';
 import users from './data/users.json';
 import Reservas from './pages/Reservas';
+import FlujoReserva from './pages/FlujoReserva';
 
 function AppRoutes() {
     const user = users.find(u => u.role === 'client');
@@ -24,6 +25,7 @@ function AppRoutes() {
             <Route path='/login' element={ <LogIn /> } />
             <Route path='/signup' element={ <SignUp /> } />
             <Route path='*' element={ <NotFoundError /> } />
+            <Route path="/reservar" element={<FlujoReserva />} />
             <Route path="/reservas" element={<Reservas />} />
             <Route path="/perfil" element={ <Profile
                 name={user.name}
