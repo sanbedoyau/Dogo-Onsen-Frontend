@@ -36,7 +36,7 @@ const ProfileBtn = ({isPhone}: ProfileBtnProps) => {
                     onClick={() => setIsModalOpen(!isModalOpen)}/>
                 <Link to=''></Link> 
                 <Link to='reservas' className='profileModal__btn'>Mis reservas</Link>
-                <Link to='perfil' className='profileModal__btn'>Mi perfil</Link>
+                <Link to='/profile' className='profileModal__btn'>Mi perfil</Link>
                 <button
                     className='profileModal__btn--closeSession'
                     onClick={() => {

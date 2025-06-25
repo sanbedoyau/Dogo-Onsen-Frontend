@@ -7,7 +7,7 @@ import Baños from './pages/Baños';
 import useScrollToTop from './components/hooks/useScrollToTop';
 import SignUp from './pages/signUp';
 import LogIn from './pages/LogIn';
-import Profile from './components/Profile/Profile';
+import Profile from './pages/ProfilePage';
 import users from './data/users.json';
 import Reservas from './pages/Reservas';
 import FlujoReserva from './pages/FlujoReserva';
@@ -27,12 +27,7 @@ function AppRoutes() {
             <Route path='*' element={ <NotFoundError /> } />
             <Route path="/reservar" element={<FlujoReserva />} />
             <Route path="/reservas" element={<Reservas />} />
-            <Route path="/perfil" element={ <Profile
-                name={user.name}
-                type={user.type}
-                email={user.email}
-                imageUrl={user.imageUrl}
-                description={user.description}/> }/>
+            <Route path="/profile" element={ <Profile /> }/>
         </Routes>
     );
 }

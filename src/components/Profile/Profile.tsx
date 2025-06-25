@@ -3,6 +3,7 @@ import  Navbar from "../Navbar/Navbar";
 import "../Profile/Profile.css";
 import "./Reservations.css"
 import "./Sidebar.css";
+import Reservas from "../../data/reservas.json";
 
 interface profileProps {
   name: string;
@@ -38,16 +39,11 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
                 </div>
                 <div className="profile__reservations">
                     <div className="profile__reservations-container">
-                        <div className="profile__reservation-card">Reserva1</div>
-                        <div className="profile__reservation-card">Reserva2</div>
-                        <div className="profile__reservation-card">Reserva3</div>
-                        <div className="profile__reservation-card">Reserva4</div>
-                        <div className="profile__reservation-card">Reserva5</div>
-                        <div className="profile__reservation-card">Reserva6</div>
-                        <div className="profile__reservation-card">Reserva7</div>
-                        <div className="profile__reservation-card">Reserva8</div>
-                        <div className="profile__reservation-card">Reserva9</div>
-                        <div className="profile__reservation-card">Reserva10</div>
+                        {Reservas.map((reserva, index) => (
+                            <div key={index} className="profile__reservation-card">
+                                {reserva.servicio}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
