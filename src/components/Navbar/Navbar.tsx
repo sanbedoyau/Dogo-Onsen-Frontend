@@ -23,15 +23,12 @@ export default function Navbar() {
           <img className='navbar__logo' src={ onsenLogo }/>
         </Link>
         <div className='navbar__options--desktop'>
-          <Options />
-          {!user ? <LogInBtn /> : <ProfileBtn isPhone={false}/>}
+          <Options isAuthenticated={!!user} />
+          {!user ? <LogInBtn /> : <ProfileBtn isPhone={false} />}
         </div>
-        <i 
-          className='navbar__btn--burger fa-solid fa-bars icon'
-          onClick={ () => setIsMenuOpen(!isMenuOpen) }/>
-        <div ref={ menuRef } className={ `navbar__options--mobile ${isMenuOpen ? 'open': ''}` }>
-          <Options />
-          {!user ? <LogInBtn /> : <ProfileBtn isPhone={true}/>}
+        <div ref={menuRef} className={`navbar__options--mobile ${isMenuOpen ? 'open' : ''}`}>
+          <Options isAuthenticated={!!user} />
+          {!user ? <LogInBtn /> : <ProfileBtn isPhone={true} />}
         </div>
       </nav>
     </>

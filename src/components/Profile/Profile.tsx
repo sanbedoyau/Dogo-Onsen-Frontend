@@ -1,6 +1,6 @@
 import  Navbar from "../Navbar/Navbar";
 // import { Link } from 'react-router-dom';
-import "./Profile.css";
+import "../Profile/Profile.css";
 import "./Reservations.css"
 import "./Sidebar.css";
 

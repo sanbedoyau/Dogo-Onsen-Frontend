@@ -23,8 +23,10 @@ export default function LogInForm() {
 
             if (user.role === 'admin') {
                 navigate('/admin-pane');
+                window.location.reload();
             } else if (user.role === 'client') {
                 navigate('/');
+                window.location.reload();
             }
         } else {
             setErrorMsg('Credenciales incorrectas');

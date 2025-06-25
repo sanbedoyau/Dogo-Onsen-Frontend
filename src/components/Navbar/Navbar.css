@@ -328,3 +328,17 @@
     transform: translate(0%);
   }
 }
+
+/* mas */
+.navbar__btn--reservar {
+  font-weight: bold;
+  color: #fefefe;
+  background-color: #5c3725;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* .navbar__btn--reservar:hover {
+  background-color: #7b4a31;
+} */
