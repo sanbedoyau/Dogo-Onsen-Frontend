@@ -1,42 +1,48 @@
-import { ServiceCard }  from "../components/Services/ServiceCard";
-import  Navbar  from "../components/Navbar/Navbar";
+// import { ServiceCard }  from "../components/Services/ServiceCard";
+// import  Navbar  from "../components/Navbar/Navbar";
 import { Link } from 'react-router-dom';
 import "../pages/AdminOptions.css";
+import GestorBaños from '../components/AdminOptions/GestorBaños';
+import GestorJabones from '../components/AdminOptions/GestorJabones';
+import GestorUsuarios from '../components/AdminOptions/GestorUsuarios';
+import GestorMenu from '../components/AdminOptions/GestorMenu';
+import React, { Component } from 'react';
 
 export default function AdminOptions() {
 
     const adminOptions = [
-        { title: "Gestion de Baños", link: "/gestionbaños"},
-        { title: "Gestion de Jabones", link: "/admin/jabones" },
-        { title: "Gestion de Usuarios", link: "/admin/usuarios" },
-        { title: "Gestion de Menu", link: "/admin/menu" },
-        { title: "Gestion de Elementos de limpieza", link: "/admin/elementos" },
-        { title: "Gestion de Personal de limpieza", link: "/admin/personal" },
+        { title: "Gestion de Baños", component: <GestorBaños /> },
+        { title: "Gestion de Jabones", component: <GestorJabones /> },
+        { title: "Gestion de Usuarios", component: <GestorUsuarios /> },
+        { title: "Gestion de Menu", component: <GestorMenu/>},
+        { title: "Gestion de Elementos de limpieza"},
+        { title: "Gestion de Personal de limpieza"},
     ];
+
+    const [selectedOption, setSelectedOption] = React.useState<string | null>("Gestion de Baños");
+
+
 
     return (
         <>
-        <Navbar/>
         <div className="admin-options">
-            <div className ="admin-options__content"></div>
             <div className="admin-options__sidebar">
                 <h2 className="admin-options__sidebar-title">Opciones</h2>
                 <ul className="admin-options__sidebar-list">
                     {
                     adminOptions.map((item, i) => (
                         <li className="admin-options__sidebar-item" key={i}>
-                            <Link to={item.link} className="admin-options__sidebar-link">{item.title}</Link>
+                            <button className="admin-options__sidebar-button" onClick={() => setSelectedOption(item.title)}>{item.title}</button>
                         </li>
                         ))
                     }
-                    {/* <li className="admin-options__sidebar-item">
-                        <Link to="/admin/reportes" className="admin-options__sidebar-link">Generar Reportes</Link>
-                    </li>
-                    <li className="admin-options__sidebar-item">
-                        <Link to="/admin/configuracion" className="admin-options__sidebar-link">Configuración</Link>
-                    </li> */}
                 </ul>
             </div>
+            <div className ="admin-options__content">
+                    {adminOptions.find(option => option.title === selectedOption)?.component}
+
+            </div>
+
         </div>
         </>
     );
