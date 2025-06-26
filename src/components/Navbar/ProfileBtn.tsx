@@ -35,7 +35,7 @@ const ProfileBtn = ({isPhone}: ProfileBtnProps) => {
                     className='fa-solid fa-xmark profileModal__btn--close'
                     onClick={() => setIsModalOpen(!isModalOpen)}/>
                 <Link to=''></Link> 
-                <Link to='reservas' className='profileModal__btn'>Mis reservas</Link>
+                <Link to='/reservas' className='profileModal__btn'>Mis reservas</Link>
                 <Link to='/profile' className='profileModal__btn'>Mi perfil</Link>
                 <button
                     className='profileModal__btn--closeSession'

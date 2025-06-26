@@ -4,6 +4,7 @@ import "../Profile/Profile.css";
 import "./Reservations.css"
 import "./Sidebar.css";
 import Reservas from "../../data/reservas.json";
+import { Link } from "react-router-dom";
 
 interface profileProps {
   name: string;
@@ -32,7 +33,7 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
                         <p className="profile__type">Tipo {type}</p>
                         <p className="profile__email">{email}</p>
 
-                        <div className="profile__description">{description}</div>
+                        <p className="profile__description">{description}</p>
 
                         <button className="profile__edit-button">Editar perfil</button>
                     </div>
@@ -41,10 +42,15 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
                     <div className="profile__reservations-container">
                         {Reservas.map((reserva, index) => (
                             <div key={index} className="profile__reservation-card">
-                                {reserva.servicio}
+                                <h3 className="profile__reservation-service">{reserva.servicio}</h3>
+                                <time className="profile__reservation-date" dateTime={reserva.fecha}>Fecha: {reserva.fecha}</time>
+                                <p className="profile__reservation-time">Hora: {reserva.hora}</p>
                             </div>
                         ))}
                     </div>
+                    <Link className="profile__reservations-link" to="/reservas">
+                        <button className="profile__reservations-button">Ver todas las reservas</button>
+                    </Link>
                 </div>
             </div>
             <div className="profile-sidebar">
