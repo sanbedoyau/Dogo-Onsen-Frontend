@@ -23,11 +23,11 @@ export default function Navbar() {
           <img className='navbar__logo' src={ onsenLogo }/>
         </Link>
         <div className='navbar__options--desktop'>
-          <Options isAuthenticated={!!user} />
+          <Options authUser={user} />
           {!user ? <LogInBtn /> : <ProfileBtn isPhone={false} />}
         </div>
         <div ref={menuRef} className={`navbar__options--mobile ${isMenuOpen ? 'open' : ''}`}>
-          <Options isAuthenticated={!!user} />
+          <Options authUser={user} />
           {!user ? <LogInBtn /> : <ProfileBtn isPhone={true} />}
         </div>
       </nav>
