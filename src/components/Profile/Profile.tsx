@@ -51,15 +51,15 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
                                         className="fas fa-xmark"
                                         onClick={() => setIsModalOpen(!isModalOpen)} />
                                 </div>
-                                <form>
-                                    <input type="text" placeholder="Nombre" />
-                                    <input type="text" placeholder="Apellido" />
-                                    <input type="text" placeholder="Telefono" />
-                                    <input type="text" placeholder="Descripción" />
-                                    <input type="text" placeholder="Constraseña" />
-                                    <input type="text" placeholder="Confirmar contraseña" />
-                                    <input type="text" placeholder="Imagen" />
-                                    <input type="submit" value="Actualizar" />
+                                <form className="editProfile__form">
+                                    <input type="text" className="form__input" placeholder="Nombre" />
+                                    <input type="text" className="form__input" placeholder="Apellido" />
+                                    <input type="tel" className="form__input" placeholder="Telefono" />
+                                    <input type="text" className="form__input" placeholder="Descripción" />
+                                    <input type="password" className="form__input" placeholder="Constraseña" />
+                                    <input type="password" className="form__input" placeholder="Confirmar contraseña" />
+                                    <input type="text" className="form__input" placeholder="Imagen" />
+                                    <input type="submit" className="form__btn" value="Actualizar" />
                                 </form>
                             </div>
                         </div>
