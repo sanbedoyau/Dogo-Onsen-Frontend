@@ -69,7 +69,7 @@
     height: 100%;
     border-radius: 18px;
     padding: 1rem;
-    background-color: #f8f8f8; /* opcional para contraste */
+    background-color: #f8f8f8; 
 }
 
 
@@ -105,7 +105,7 @@
     color: #130804;
 }
 .baños-card-front strong {
-    color: #0f0702; /* Cambia este color a tu gusto */
+    color: #0f0702; 
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: bold;

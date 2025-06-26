@@ -1,16 +1,16 @@
 
 .jabon-container {
-  background-image: url('../assets/img/Onsen.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  min-height: 100vh;
-  padding: 60px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: brightness(0.95);
+    background-image: url('../assets/img/Onsen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: brightness(0.95);
 }
 .jabon-title {
     font-size: 2.7rem;
@@ -40,11 +40,13 @@
     width: 260px;
     height: 320px;
     perspective: 1000px;
+    text-align: center;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(154, 53, 42, 0.13);
     border: 2px solid #e7e9e500;
     background: linear-gradient(120deg, #fff8f055 80%, #ffe8d6d3 100%);
     transition: box-shadow 0.3s;
+    padding: 0.2rem;
 }
 .jabon-card:hover {
     box-shadow: 0 12px 32px rgba(176,58,46,0.22);
@@ -61,6 +63,16 @@
 .jabon-card:hover .jabon-card-inner {
     transform: rotateY(180deg);
 }
+
+.jabon-card-back {
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 18px;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
 
 .jabon-card-front img {
     width: 80%;
@@ -79,7 +91,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .jabon-card-front h3 {
     font-size: 1.7rem;
@@ -95,7 +106,7 @@
     color: #130804;
 }
 .jabon-card-front strong {
-    color: #0f0702; /* Cambia este color a tu gusto */
+    color: #0f0702;
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: bold;
@@ -108,7 +119,7 @@
     backface-visibility: hidden;
     font-size: 1.05rem;
     color: #280f06;
-    border: 1.5px dashed #b03a2e;
+    border: 3px dashed #b03a2e;
 }
 
 @media (max-width: 600px) {
