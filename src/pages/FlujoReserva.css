@@ -1,8 +1,21 @@
+.flujo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('src/assets/img/chihiro noche.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .flujo-container {
-  max-width: 500px;
+  width: 500px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: rgba(167, 194, 210, 0.9);
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -43,8 +56,8 @@
 .flujo-btn {
   margin-top: 1.5rem;
   padding: 0.7rem 1rem;
-  background-color: #9b5de5;
-  color: white;
+  background-color: #bead91;
+  color: black;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -52,5 +65,5 @@
 }
 
 .flujo-btn:hover {
-  background-color: #7a3fc8;
+  background-color: #922a1f;
 }
