@@ -80,9 +80,9 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
                     </Link>
                 </div>
             </div>
-            <div className="profile-sidebar">
+            {/* <div className="profile-sidebar">
                 <h2>Opciones</h2>
-            </div>
+            </div> */}
         </div>
         </>
     );

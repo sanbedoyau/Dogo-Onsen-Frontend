@@ -5,9 +5,9 @@
     background-color: rgba(186, 200, 209,0.95);
     padding: 1.5em;
     box-sizing: border-box;
-    /* width: 70%; */
+    width: 50%;
     border-radius: 10px;
-    height: 40%;
+    height: 100%;
 }
 
 .profile__reservations-container{
@@ -30,7 +30,7 @@
     background-color: rgba(254, 237, 212, 0.7);
     min-width: 200px;
     width: 200px;
-    /* min-height: 200px; */
+    max-height: 200px;
 
     border: 2px solid rgb(171, 71, 49);
     border-radius: 13px;
@@ -96,4 +96,13 @@
     background-color: transparent;
     font-size: 12px;
     color:white
+}
+
+@media (max-width: 1200px) {
+    .profile__reservations{
+        width: 100%;
+    }
+
+
+
 }

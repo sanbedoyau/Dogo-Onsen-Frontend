@@ -7,11 +7,14 @@
 .profile-layout{
     display: flex;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     padding:0.2em;
     gap: 0.2rem;
     background-image: url("/src/assets/img/no-image.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* box-sizing: border-box; */
 
 }
 
@@ -20,8 +23,8 @@
     /* background-color: rgba(214, 46, 184, 0.95); */
     height: 100%;
     display: flex;
-    flex-direction: column;
-    width: 70%;   
+    /* flex-direction: column; */
+    width: 100%;   
     /* box-sizing: border-box; */
     gap: 0.2rem;
 }
@@ -33,7 +36,8 @@
     padding: 3rem;
     border-radius: 10px;
     align-items: center;
-    height: 60%;
+    height: 100%;
+    width: 50%;
 
 }
 
@@ -120,7 +124,7 @@
 }
 
 .editProfileModal {
-    width: 35%;
+    width: 30%;
     height: 50%;
     background-color: #e8d3b2;
     border-radius: 20px;
@@ -139,27 +143,7 @@
     }
 }
 
-.editProfile__form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 2rem;
-}
-
-.form__input {
-    padding: 0.25rem 0.5rem;
-}
-
-.form__btn {
-    padding: 0.25rem 0.5rem;
-    background-color: rgb(171, 71, 49);
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
     .profile-layout{
         height: auto;
     }
@@ -184,11 +168,39 @@
         margin: 1rem 0;
     }
     
-}
+} */
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
+    .profile-layout{
+        height: auto;
+        flex-direction: column;
+        width: auto;
+    }
+
     .profile{
+        flex-direction: column;
+        height: auto;
         width: 100%;
+    }
+    
+    .profile__content {
+        flex-wrap: wrap;
+        height: 750px;
+        justify-content: center;
+        width: 100%;
+    }
+    .profile{
+        width: auto;
+    }
+    .profile__info{
+        width: 100%;
+        margin-left: 0px;
+        padding: 1rem;
+        height: 50%;
+        text-align: center;
+    }
+    .profile__description {
+        margin: 1rem 0;
     }
     .profile-layout {
         flex-direction: column;
