@@ -103,6 +103,42 @@
     scrollbar-color: #040404 rgba(0, 0, 0, 0); 
 }
 
+.editProfile {
+    display: none;
+    background-color: #88888880;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    &.open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.editProfileModal {
+    width: 30%;
+    height: 50%;
+    background-color: #e8d3b2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.editProfile__heading {
+    background: linear-gradient(rgba(223, 56, 48, 0.4), rgba(223, 56, 48, 0.4)), 
+            url('../../assets/img/wood-texture.jpg');
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    & > i {
+        cursor: pointer;
+        color: #bccad3f0;
+    }
+}
+
 @media (max-width: 1000px){
     .profile-layout{
         height: auto;

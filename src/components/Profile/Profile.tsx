@@ -5,6 +5,8 @@ import "./Reservations.css"
 import "./Sidebar.css";
 import Reservas from "../../data/reservas.json";
 import { Link } from "react-router-dom";
+import useOutsideInteraction from "../hooks/useOutsideInteraction";
+import { useState } from "react";
 
 interface profileProps {
   name: string;
@@ -17,6 +19,12 @@ interface profileProps {
 //<Profile name="John Doe" type="Haku" email="john@example.com" imageUrl="/src/assets/img/no-image.jpg" />
 //Falta definir la estrucura de datos de las reservas y el sidebar
 export default function Profile({ name, type, email, imageUrl, description }: profileProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const modalRef = useOutsideInteraction<HTMLDivElement>(
+        isModalOpen,
+        () => setIsModalOpen(false)
+    );
 
     return (
         <>
@@ -35,7 +43,26 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
 
                         <p className="profile__description">{description}</p>
 
-                        <button className="profile__edit-button">Editar perfil</button>
+                        <button className="profile__edit-button" onClick={() => setIsModalOpen(!isModalOpen)}>Editar perfil</button>
+                        <div className={`editProfile${isModalOpen ? ' open' : ''}`}>
+                            <div ref={modalRef} className='editProfileModal'>
+                                <div className="editProfile__heading">
+                                    <i 
+                                        className="fas fa-xmark"
+                                        onClick={() => setIsModalOpen(!isModalOpen)} />
+                                </div>
+                                <form>
+                                    <input type="text" placeholder="Nombre" />
+                                    <input type="text" placeholder="Apellido" />
+                                    <input type="text" placeholder="Telefono" />
+                                    <input type="text" placeholder="Descripción" />
+                                    <input type="text" placeholder="Constraseña" />
+                                    <input type="text" placeholder="Confirmar contraseña" />
+                                    <input type="text" placeholder="Imagen" />
+                                    <input type="submit" value="Actualizar" />
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="profile__reservations">
