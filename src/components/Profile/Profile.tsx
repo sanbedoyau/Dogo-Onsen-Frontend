@@ -20,7 +20,7 @@ export default function Profile({ name, type, email, imageUrl, description }: pr
 
     return (
         <>
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="profile-layout">
             <div className="profile">
                 <div className="profile__content">
