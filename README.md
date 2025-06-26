@@ -1,3 +1,17 @@
+## Integrantes
+- Luis Montoya
+- Juliana Bedoya
+- Santiago Bedoya
+- Jeronimo Salazar
+
+
+
+## Acerca del proyecto
+Esta es una página web de un balneario japonés inspirado en la película el viaje de Chihiro.
+
+Ten en cuenta:
+Para acceder a la vista del cliente o la vista de administrador, debes rellenar el formulario de inicio de sesión con las credenciales correspondientes que encontrarás en el archivo users.json
+
 ## Requisitos
 - [Node.js](https://nodejs.org/en)
 - `npm`
