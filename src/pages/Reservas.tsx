@@ -41,15 +41,15 @@ const handleCancelar = (id: number) => {
       <p><strong>Hora:</strong> {reserva.hora}</p>
       <p><strong>Cliente:</strong> {reserva.cliente}</p>
 
-      <div className="reserva-actions">
+      <div className="reserva-btns">
         <button
-          className="reserva-btn modificar"
+          className="btn-modificar"
           onClick={() => handleModificar(reserva.id)}
         >
           Modificar
         </button>
         <button
-          className="reserva-btn cancelar"
+          className="btn-cancelar"
           onClick={() => handleCancelar(reserva.id)}
         >
           Cancelar
