@@ -22,7 +22,7 @@ export default function LogInForm() {
             localStorage.setItem('loggedUser', JSON.stringify(user))
 
             if (user.role === 'admin') {
-                navigate('/admin-pane');
+                navigate('/admin-options');
                 window.location.reload();
             } else if (user.role === 'client') {
                 navigate('/');
