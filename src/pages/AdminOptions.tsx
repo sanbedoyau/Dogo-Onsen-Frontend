@@ -18,7 +18,7 @@ export default function AdminOptions() {
 
     useEffect(() => {
         if (!user || user.role !== 'admin') {
-        navigate('/'); // o la ruta que desees
+        navigate('/'); 
         }
     }, []);
 

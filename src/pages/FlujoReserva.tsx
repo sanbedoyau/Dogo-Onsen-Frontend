@@ -18,6 +18,7 @@ const FlujoReserva = () => {
   };
 
   return (
+    <div className="flujo">
     <div className="flujo-container">
       <h2>Reservar</h2>
       <form className="flujo-form" onSubmit={handleSubmit}>
@@ -82,6 +83,7 @@ const FlujoReserva = () => {
 
         <button type="submit" className="flujo-btn">Confirmar reserva</button>
       </form>
+    </div>
     </div>
   );
 };

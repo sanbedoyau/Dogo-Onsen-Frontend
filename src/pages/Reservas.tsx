@@ -7,7 +7,8 @@ interface Reserva {
   fecha: string;
   hora: string;
   servicio: string;
-  cliente: string;
+  jabonespecial: string;
+  banquete: string;
 }
 
 const Reservas: React.FC = () => {
@@ -39,7 +40,8 @@ const handleCancelar = (id: number) => {
       <p><strong>Servicio:</strong> {reserva.servicio}</p>
       <p><strong>Fecha:</strong> {reserva.fecha}</p>
       <p><strong>Hora:</strong> {reserva.hora}</p>
-      <p><strong>Cliente:</strong> {reserva.cliente}</p>
+      <p><strong>Jabón especial:</strong> {reserva.jabonespecial}</p>
+      <p><strong>Banquete:</strong> {reserva.banquete}</p>
 
       <div className="reserva-btns">
         <button

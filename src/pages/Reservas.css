@@ -26,10 +26,13 @@
 }
 
 .reservas-container ul {
-  width: 100%;
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
+  margin: 0;
+  max-width: 1200px;
 }
 
 .reservas-container li {
