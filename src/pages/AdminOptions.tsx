@@ -1,22 +1,34 @@
 // import { ServiceCard }  from "../components/Services/ServiceCard";
 // import  Navbar  from "../components/Navbar/Navbar";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import "../pages/AdminOptions.css";
 import GestorBaños from '../components/AdminOptions/GestorBaños';
 import GestorJabones from '../components/AdminOptions/GestorJabones';
 import GestorUsuarios from '../components/AdminOptions/GestorUsuarios';
 import GestorMenu from '../components/AdminOptions/GestorMenu';
-import React, { Component } from 'react';
+import GestorPersonalLimpieza from '../components/AdminOptions/GestorPersonalLimpieza';
+import GestorElementosLimpieza from '../components/AdminOptions/GestorElementosLimpieza';
+import {useNavigate } from 'react-router-dom';
+import React,{useEffect} from 'react';
 
 export default function AdminOptions() {
+    const navigate = useNavigate();
+    
+    const user = JSON.parse(localStorage.getItem('loggedUser') || 'null');
+
+    useEffect(() => {
+        if (!user || user.role !== 'admin') {
+        navigate('/'); // o la ruta que desees
+        }
+    }, []);
 
     const adminOptions = [
         { title: "Gestion de Baños", component: <GestorBaños /> },
         { title: "Gestion de Jabones", component: <GestorJabones /> },
         { title: "Gestion de Usuarios", component: <GestorUsuarios /> },
         { title: "Gestion de Menu", component: <GestorMenu/>},
-        { title: "Gestion de Elementos de limpieza"},
-        { title: "Gestion de Personal de limpieza"},
+        { title: "Gestion de Elementos de limpieza", component: <GestorElementosLimpieza /> },
+        { title: "Gestion de Personal de limpieza", component: <GestorPersonalLimpieza /> },
     ];
 
     const [selectedOption, setSelectedOption] = React.useState<string | null>("Gestion de Baños");
@@ -36,6 +48,13 @@ export default function AdminOptions() {
                         </li>
                         ))
                     }
+                    <li className="admin-options__sidebar-item logout">
+                        <button className="admin-options__sidebar-button" onClick={() => {
+                            localStorage.removeItem('loggedUser');
+                            navigate('/');
+                        }}>Cerrar sesión</button>
+                    </li>
+
                 </ul>
             </div>
             <div className ="admin-options__content">
