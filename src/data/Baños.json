@@ -1,32 +1,32 @@
-    [
+[
     {
-        "nombre": "Baño de Vapor termal del loto silencioso",
-        "descripcion": "Envuelto en un suave vapor floral, este baño purifica el cuerpo y el alma con esencias de loto ancestral. Ideal para quienes buscan renovar su energía vital.",
-        "precio": "$30 Dragas",
-        "imagen": "src/assets/img/baño_loto.jpg"
+        "name": "Baño de Vapor termal del loto silencioso",
+        "description": "Envuelto en un suave vapor floral, este baño purifica el cuerpo y el alma con esencias de loto ancestral. Ideal para quienes buscan renovar su energía vital.",
+        "price": 30,
+        "img": "src/assets/img/baño_loto.jpg"
     },
     {
-        "nombre": "Baño termal de luna de media noche",
-        "descripcion": "Bajo una luz plateada encantada, sus aguas profundas calman la mente y otorgan sueños lúcidos a los espíritus viajeros. Se dice que el reflejo de la luna revela verdades ocultas.",
-        "precio": "$28 Dragas",
-        "imagen": "src/assets/img/baño_luna.jpg"
+        "name": "Baño termal de luna de media noche",
+        "description": "Bajo una luz plateada encantada, sus aguas profundas calman la mente y otorgan sueños lúcidos a los espíritus viajeros. Se dice que el reflejo de la luna revela verdades ocultas.",
+        "price": 28,
+        "img": "src/assets/img/baño_luna.jpg"
     },
     {
-        "nombre": "Baño termal escama de dragón",
-        "descripcion": "Este baño poderoso, calentado por fuego antiguo, fortalece el espíritu y templa el carácter. Las escamas de dragón disueltas elevan la resistencia espiritual.",
-        "precio": "$32 Dragas",
-        "imagen": "src/assets/img/baño_dragon.jpg"
+        "name": "Baño termal escama de dragón",
+        "description": "Este baño poderoso, calentado por fuego antiguo, fortalece el espíritu y templa el carácter. Las escamas de dragón disueltas elevan la resistencia espiritual.",
+        "price": 32,
+        "img": "src/assets/img/baño_dragon.jpg"
     },
     {
-        "nombre": "Baño termal hierbas del hechicero",
-        "descripcion": "Infusión de hierbas secretas recogidas al amanecer por brujos errantes. Alivia tensiones mágicas, dolores del alma y bloqueos del chi.",
-        "precio": "$35 Dragas",
-        "imagen": "src/assets/img/baño_hechizo.jpg"
+        "name": "Baño termal hierbas del hechicero",
+        "description": "Infusión de hierbas secretas recogidas al amanecer por brujos errantes. Alivia tensiones mágicas, dolores del alma y bloqueos del chi.",
+        "price": 35,
+        "img": "src/assets/img/baño_hechizo.jpg"
     },
     {
-        "nombre": "Baño de las almas perdidas",
-        "descripcion": "Baño etéreo cubierto de neblina azul, donde las almas extraviadas encuentran consuelo. Solo para visitantes valientes, ya que algunas memorias podrían volver con ellos.",
-        "precio": "$25 Dragas",
-        "imagen": "src/assets/img/baño_almas.jpg"
+        "name": "Baño de las almas perdidas",
+        "description": "Baño etéreo cubierto de neblina azul, donde las almas extraviadas encuentran consuelo. Solo para visitantes valientes, ya que algunas memorias podrían volver con ellos.",
+        "price": 25,
+        "img": "src/assets/img/baño_almas.jpg"
     }
 ]
