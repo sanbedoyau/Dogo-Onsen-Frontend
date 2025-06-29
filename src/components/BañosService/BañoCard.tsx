@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 interface Baño {
     name: string;
     description: string;
@@ -14,8 +12,8 @@ interface BañoCardProps {
 const BañoCard = ({ baños }: BañoCardProps ) => {
     return (
         <>
-            {baños.map((baño, _) => {
-                return (<div className='bañoCard' >
+            {baños.map((baño, index) => {
+                return (<div className='bañoCard' key={index}>
                     <div className='bañoCard__inner'>
                         <div className='bañoCard__front'>
                             <img src={ baño.img }/>
