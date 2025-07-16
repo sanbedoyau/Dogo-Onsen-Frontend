@@ -4,13 +4,8 @@
 - Santiago Bedoya
 - Jeronimo Salazar
 
-
-
 ## Acerca del proyecto
 Esta es una página web de un balneario japonés inspirado en la película el viaje de Chihiro.
-
-Ten en cuenta:
-Para acceder a la vista del cliente o la vista de administrador, debes rellenar el formulario de inicio de sesión con las credenciales correspondientes que encontrarás en el archivo users.json
 
 ## Requisitos
 - [Node.js](https://nodejs.org/en)
@@ -18,26 +13,45 @@ Para acceder a la vista del cliente o la vista de administrador, debes rellenar 
 
 ## Instalación
 
-Para descargar esta página, puedes seguir los siguientes pasos por consola, o clonar el repositorio mediante GitHub Desktop.
+1. Clonar el repositorio
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/sanbedoyau/Dogo-Onsen-Frontend.git
+- git clone https://github.com/sanbedoyau/Dogo-Onsen-Frontend.git 
+- cd Dogo-Onsen-Frontend
 
-# Navegar al repositorio
-cd Dogo-Onsen-Frontend
-# ...
-```
+2. Crear archivo .env en el backend
+Crear el archivo .env dentro de la carpeta back/ con el siguiente contenido:
 
-Nota\*:Ten en cuenta que `git clone` clonará el repositorio en el directorio de trabajo actual, por lo que debes asegurarte de estar situado en el directorio donde quieres clonar el repositorio.
+- JWT_SECRET=supersecreto123  # CAMBIAR POR CUALQUIER COSA
+- PORT=4000
 
-```bash
-# ...
-# Instalar las dependencias
-npm install
+3. Crear archivo .env en el frontend
+Crear el archivo .env dentro de la carpeta front/ con el siguiente contenido:
 
-# Levantar el servidor de desarrollo
-npm run dev
-```
+- VITE_API_URL=http://localhost:4000
 
-Finalmente abre tu navegador y aceede a http://localhost:5173 para ver la aplicación.
+4. Instalar dependencias y configurar backend
+
+- cd back/
+- npm install
+- npx prisma migrate dev --name init
+- npx prisma generate
+
+5. Insertar datos en la base de datos
+
+- npx tsx scripts/seed.ts
+
+6. Levantar el servidor del backend
+
+- npm run dev
+
+7. Instalar dependencias y levantar el frontend
+Desde otra terminal:
+
+- cd front/
+- npm install
+- npm run dev
+
+
+## Usuarios disponibles luego de correr el script de seed
+- admin@gmail.com / 1234
+- user@gmail.com / 1234
