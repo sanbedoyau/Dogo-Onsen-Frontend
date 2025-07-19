@@ -26,6 +26,7 @@ export default function Navbar() {
           <Options authUser={user} />
           {!user ? <LogInBtn /> : <ProfileBtn isPhone={false} />}
         </div>
+        <i className='fa solid fa-bars navbar__btn--burger' onClick={ () => setIsMenuOpen(!isMenuOpen) } />
         <div ref={menuRef} className={`navbar__options--mobile ${isMenuOpen ? 'open' : ''}`}>
           <Options authUser={user} />
           {!user ? <LogInBtn /> : <ProfileBtn isPhone={true} />}

@@ -158,8 +158,10 @@
 
 .navbar__btn--burger {
   display: inline;
-  width: 10vw;
-  padding: 3vw;
+  font-size: 3rem;
+  color: rgba(188, 202, 211, 0.8);
+  cursor: pointer;
+  padding: 1rem;
 }
 
 .navbar__logo {
