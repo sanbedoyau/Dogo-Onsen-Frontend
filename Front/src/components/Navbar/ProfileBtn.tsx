@@ -40,6 +40,7 @@ const ProfileBtn = ({isPhone}: ProfileBtnProps) => {
                 <button
                     className='profileModal__btn--closeSession'
                     onClick={() => {
+                        localStorage.removeItem('token');
                         localStorage.removeItem('loggedUser');
                         navigate('/');
                     }}>
