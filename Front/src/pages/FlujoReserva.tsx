@@ -8,13 +8,19 @@ import { useNavigate } from 'react-router-dom';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 
-const FlujoReserva = () => {
+type FlujoReservaProps = {
+  Baño: Baño | null;
+  onClose: () => void;
+}
+
+export default function FlujoReserva ({Baño, onClose}: FlujoReservaProps) {
   const navigate = useNavigate();
   const [baños, setBaños] = useState<Baño[]>([]);
   const [jabones, setJabones] = useState<Jabon[]>([]);
   const [menus, setMenus] = useState<Menu[]>([]);
-
-  const [baño, setBaño] = useState('');
+  console.log('Baño recibido:', Baño);
+  const [baño, setBaño] = useState(''); // Si se pasa un baño, usar su ID
+  // console.log("Baño baño",String(baño))
   const [jabonEspecial, setJabonEspecial] = useState(false);
   const [jabonSeleccionado, setJabonSeleccionado] = useState('');
   const [banquete, setBanquete] = useState(false);
@@ -23,6 +29,9 @@ const FlujoReserva = () => {
 
   const [authUser, setAuthUser] = useState<{ id: number; rol: string } | null>(null);
 
+  if (Baño && String(Baño.id) !== 'undefined' && String(Baño.id) !== baño) {
+    setBaño(String(Baño.id));
+  }
   useEffect(() => {
     async function fetchDatos() {
       try {
@@ -112,22 +121,9 @@ const FlujoReserva = () => {
     (banquete && menuObj ? menuObj.precio : 0);
 
   return (
-    <div className="flujo">
       <div className="flujo-container">
         <h2>Reservar</h2>
         <form className="flujo-form" onSubmit={handleSubmit}>
-          <label>
-            Selecciona un baño:
-            <select value={baño} onChange={(e) => setBaño(e.target.value)} required>
-              <option value="">-- Selecciona --</option>
-              {baños.map((b) => (
-                <option key={b.id} value={b.id}>
-                  {b.nombre} (${b.precio})
-                </option>
-              ))}
-            </select>
-          </label>
-
           <label>
             ¿Deseas jabones especiales?
             <input
@@ -202,12 +198,9 @@ const FlujoReserva = () => {
           </p>
           <div className="botones-container">
             <button type="submit" className="flujo-btn">Confirmar reserva</button>
-            <button type="button" className="flujo-btn cancelar" onClick={() => navigate('/')}>Cancelar</button>
+            <button type="button" className="flujo-btn cancelar" onClick={() => onClose()}>Cancelar</button>
           </div>
         </form>
       </div>
-    </div>
   );
 };
-
-export default FlujoReserva;

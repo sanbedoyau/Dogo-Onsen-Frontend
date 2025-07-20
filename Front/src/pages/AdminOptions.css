@@ -66,21 +66,6 @@
       animation: aparecer 0.3s ease;
   }
 }
-.admin-options__modal{
-  display: none;
-  z-index: 2;
-  position: absolute;
-  flex-direction: column;
-  border-radius: 1vw;
-  padding: 0.5vw 1vw;
-  margin: 0.5vw 1vw;
-  background-color: #fe5f10a0;
-      &.open {
-    display: flex;
-    animation: aparecer 0.3s ease;
-  }
-
-}
 
 .admin-options__modal-link{
   text-decoration: none;

@@ -4,12 +4,15 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    min-height: 100vh;
-    padding: 60px 30px;
+    /* min-height: 100vh; */
+    height: auto;
+    padding: 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    /* overflow-y:scroll; */
+    /* overflow-x: hidden; */
+    /* background-color: aqua; */
     & > h2 {
         font-size: 2.7rem;
         font-family: 'Noto Serif JP', 'Georgia', serif;
@@ -28,6 +31,12 @@
     justify-content: center;
     gap: 2.5rem;
     width: 100%;
+    /* max-height: fit-content; */
+    height: auto;
+    /* background-color: #a23024; */
+    /* overflow-y:auto; */
+    /* overflow-x: hidden; */
+    padding: 1rem;
 }
 
 .bañoCard {
@@ -85,6 +94,7 @@
 .bañoCard__back {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     overflow-y: auto;
     height: 100%;
@@ -98,6 +108,55 @@
         line-height: 1.4;
         color: #280f06;
     }
+}
+
+.bañoCard__button{
+    background-color: rgb(171, 71, 49);
+    width: auto;
+    padding: 0.5rem 2rem;
+    color: white;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+    border-radius: 10px;
+    
+}
+.bañoCard__modal-content {
+    display: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+  
+    /* left: 0; */
+    &.open {
+        display: flex;
+        /* flex-direction: column; */
+        animation: aparecer2 1s ease;
+  }
+}
+@keyframes aparecer2 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.bañoCard__FlujoReserva-container{
+
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 600px) {

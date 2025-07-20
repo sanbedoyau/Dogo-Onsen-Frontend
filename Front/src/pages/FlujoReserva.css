@@ -1,4 +1,4 @@
-.flujo{
+/* .flujo{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +9,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 .flujo-container {
-  width: 500px;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  width: 80vw;
+  /* height: 80vh; */
   margin: 0 auto;
-  padding: 2rem;
-  background-color: rgba(167, 194, 210, 0.9);
+  padding: 4rem;
+  background-color: rgba(167, 194, 210, 1);
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -29,6 +32,8 @@
 .flujo-form {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
+
   gap: 1.2rem;
 }
 
