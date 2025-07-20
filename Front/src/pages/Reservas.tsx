@@ -89,7 +89,7 @@ const Reservas: React.FC = () => {
   };
 
   const handleGuardar = async (id: number) => {
-    const fecha = nuevaFecha[id];
+    const fecha = nuevaFecha[id]+"T00:00:00-05:00";
     const jabonId = nuevoJabonId[id];
     const menuId = nuevoMenuId[id];
     const bañoId = nuevoBañoId[id];

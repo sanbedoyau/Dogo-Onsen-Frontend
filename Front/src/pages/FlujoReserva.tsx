@@ -79,7 +79,7 @@ export default function FlujoReserva ({Baño, onClose}: FlujoReservaProps) {
       bañoId: Number(baño),
       jabonId: jabonEspecial && jabonSeleccionado ? Number(jabonSeleccionado) : null,
       menuId: banquete && menuSeleccionado ? Number(menuSeleccionado) : null,
-      fecha,
+      fecha: fecha + "T00:00:00-05:00",
       usuarioId: authUser.id,
       total
     };
