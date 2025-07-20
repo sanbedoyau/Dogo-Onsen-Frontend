@@ -103,3 +103,23 @@ td {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  
+.gestor__imagen {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1360px) {
+  td, th{
+    width: 150px;
+  }
+  td 
+  {
+    height: 150px;
+  }
+}

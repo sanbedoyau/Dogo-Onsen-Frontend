@@ -133,13 +133,6 @@ const handleGuardar = async (index: number) => {
 
   return (
     <div className="gestor">
-      <div className="gestor__header">
-      {/* <div className="gestor__header"> */}
-        {/* <h2>Gestión de Baños</h2> */}
-        {/* <button className="gestor__add-button" onClick={handleNuevo}>
-          <span style={{ fontSize: "20px", fontWeight: "bold" }}>+</span> Nuevo
-        </button> */}
-      {/* </div> */}
       <div className="gestor__table-container">
       <table className="gestor__table">
         <thead>
