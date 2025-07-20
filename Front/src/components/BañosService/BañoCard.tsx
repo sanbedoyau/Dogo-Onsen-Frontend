@@ -31,12 +31,14 @@ const BañoCard = ({ baños , authUser }: BañoCardProps) => {
             </div>
             <div className='bañoCard__back'>
               <p>{baño.descripcion}</p>
-                {(authUser?.rol === 'USER' || authUser?.rol === 'ADMIN') && (
+                {(authUser?.rol === 'USER' || authUser?.rol === 'ADMIN') ? (
                   <button className='bañoCard__button' onClick={() => {
                     setCurrentBaño(baño);
                     setIsModalOpen(!isModalOpen);
                   }}>Reservar</button>
-                )}  
+                ) : (
+                  <button className="bañoCard__button" onClick={() => alert('Inicia sesión para reservar')}>Reservar</button>
+                )}
             </div>
           </div>
         </div>
