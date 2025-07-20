@@ -144,7 +144,7 @@ export default function GestorUsuarios() {
             <th>Imagen</th>
             <th>Descripción</th>
             <th>Rol</th>
-            <th>Acciones</th>
+            <th className="gestor__add-button" onClick={handleNuevo}>+</th>
           </tr>
         </thead>
         <tbody>
