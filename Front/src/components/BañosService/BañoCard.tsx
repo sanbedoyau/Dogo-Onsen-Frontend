@@ -2,12 +2,16 @@ import type { Baño } from '../../types/baño'; // ✅ Usamos tipo correcto
 import useOutsideInteraction from '../../components/hooks/useOutsideInteraction';
 import { useState } from 'react';
 import FlujoReserva from '../../pages/FlujoReserva';
+import type { Usuario } from '../../types/usuario'; 
+
 
 interface BañoCardProps {
   baños: Baño[];
+  authUser: Usuario | null;
 }
 
-const BañoCard = ({ baños }: BañoCardProps) => {
+
+const BañoCard = ({ baños , authUser }: BañoCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const modalRef = useOutsideInteraction<HTMLDivElement>(
@@ -27,10 +31,12 @@ const BañoCard = ({ baños }: BañoCardProps) => {
             </div>
             <div className='bañoCard__back'>
               <p>{baño.descripcion}</p>
-                <button className='bañoCard__button' onClick={() => {
-                  setCurrentBaño(baño);
-                  setIsModalOpen(!isModalOpen);
-                }}>Reservar</button>
+                {(authUser?.rol === 'USER' || authUser?.rol === 'ADMIN') && (
+                  <button className='bañoCard__button' onClick={() => {
+                    setCurrentBaño(baño);
+                    setIsModalOpen(!isModalOpen);
+                  }}>Reservar</button>
+                )}  
             </div>
           </div>
         </div>

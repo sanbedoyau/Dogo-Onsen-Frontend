@@ -12,12 +12,6 @@ export default function Options({ authUser }: OptionsProps) {
       <Link to="/menu" className="navbar__btn--option" id="menuBtn">Menú</Link>
       <Link to="/jabones" className="navbar__btn--option" id="jabonesBtn">Jabones</Link>
 
-      {authUser?.rol === 'USER' && (
-        <Link to="/reservar" className="navbar__btn--option" id="reservarBtn">
-          Reservar
-        </Link>
-      )}
-
       {authUser?.rol === 'ADMIN' && (
         <Link to="/admin-options" className="navbar__btn--option" id="adminBtn">
           adminPanel

@@ -5,6 +5,7 @@ import type { Baño } from '../../types/baño'; // ✅ Usamos tipo centralizado
 import './BañosService.css';
 
 export default function BañosService() {
+  const user = JSON.parse(localStorage.getItem('loggedUser') || 'null');
   const [baños, setBaños] = useState<Baño[]>([]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function BañosService() {
     <div className='bañosContainer'>
       <h2>Baños del Onsen</h2>
       <div className='bañosGrid'>
-        <BañoCard baños={baños} />
+        <BañoCard baños={baños} authUser={user} />
       </div>
     </div>
   );

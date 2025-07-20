@@ -41,7 +41,6 @@ function AppRoutes() {
             <Route path='/login' element={ <LogIn /> } />
             <Route path='/signup' element={ <SignUp /> } />
             <Route element= { <ProtectedRoute /> }>
-                <Route path="/reservar" element={<FlujoReserva />} />
                 <Route path="/reservas" element={<Reservas />} />
                 <Route path="/profile" element={ <Profile /> }/>
                 <Route path="/admin-options" element={ <AdminOptions /> } />
