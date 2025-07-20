@@ -12,7 +12,7 @@ export default function OptionsButton({ onSelect }: OptionsButtonProps) {
   );
   return (
     <>
-        <div ref={modalRef} className="admin-options__btn">
+        <div  className="admin-options__btn">
             <i className="fas fa-bars" onClick= {() => setIsModalOpen(!isModalOpen)}/>
             <div ref={modalRef} className={`admin-options__modal-content${isModalOpen ? ' open' : ''}`}>
                 <button  onClick= {() => onSelect('Gestion de Baños')} className='admin-options__modal-link'>Gestion de Baños</button>
