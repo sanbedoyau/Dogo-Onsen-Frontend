@@ -134,12 +134,13 @@ const handleGuardar = async (index: number) => {
   return (
     <div className="gestor">
       <div className="gestor__header">
-        <h2>Gestión de Baños</h2>
-        <button className="gestor__add-button" onClick={handleNuevo}>
+      {/* <div className="gestor__header"> */}
+        {/* <h2>Gestión de Baños</h2> */}
+        {/* <button className="gestor__add-button" onClick={handleNuevo}>
           <span style={{ fontSize: "20px", fontWeight: "bold" }}>+</span> Nuevo
-        </button>
-      </div>
-
+        </button> */}
+      {/* </div> */}
+      <div className="gestor__table-container">
       <table className="gestor__table">
         <thead>
           <tr>
@@ -147,7 +148,7 @@ const handleGuardar = async (index: number) => {
             <th>Descripción</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th>Acciones</th>
+            <th className="gestor__add-button" onClick={handleNuevo}>+</th>
           </tr>
         </thead>
         <tbody>
@@ -181,7 +182,12 @@ const handleGuardar = async (index: number) => {
                   <td>{bano.nombre}</td>
                   <td>{bano.descripcion}</td>
                   <td>${bano.precio}</td>
-                  <td>{bano.imagen}</td>
+                  <td>
+                    <img
+                      src={bano.imagen}
+                      alt={bano.nombre}
+                      className="gestor__imagen" />
+                  </td>
                 </>
               )}
               <td>
@@ -201,6 +207,7 @@ const handleGuardar = async (index: number) => {
           ))}
         </tbody>
       </table>
+      </div>
       {showSelector && selectorIndex !== null && (
       <SelectorImagen
         imagenes={imagenesDisponibles}

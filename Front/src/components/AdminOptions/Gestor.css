@@ -1,33 +1,39 @@
 .gestor {
     /* padding: 1em; */
     width: 100%;
-    max-height: 100%;
-    overflow-y: auto;
+    height: 95%;
     overflow-x: auto;
 
 }
-.gestor__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1em;
-    padding: 0 1em;
-  }
-  
+ 
 
 h2 {
     text-align: center;
     font-size: 1.5em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+}
+
+.gestor__table-container{
+  box-sizing: border-box;
+  border-radius: 10px;
+  /* background-color: black; */
+  width: 100%;
+  /* max-height: auto; */
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+
 }
 
 table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0.1em;
-    /* background-color: rgba(254, 237, 212, 0.85); */
-    border-radius: 10px;
-    
+  table-layout: fixed; 
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.1em;
+  /* background-color: rgba(254, 237, 212, 0.85); */
+  border-radius: 10px;
+  
 }
 
 thead {
@@ -44,6 +50,12 @@ th {
 
 td {
   /* background-color: rgba(29, 123, 182, 0.95); */
+    /* overflow-x: auto; */
+    /* word-wrap: break-word;  */
+    /* overflow-wrap: break-word; */
+    /* height: 150px; */
+
+    word-wrap: break-word; 
     text-align: center;
     padding: 0.5em;
     color: black;
@@ -51,19 +63,16 @@ td {
     background-color:  rgba(254, 237, 212, 0.85);
 }
 
+
 .gestor__add-button {
     background-color: green;
     color: white;
-    font-size: 18px;
     font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 12px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    display: flex;
     align-items: center;
-    gap: 6px;
+    /* border-top-left-radius: 10px; */
+
   }
   
   .gestor__add-button:hover {
@@ -94,4 +103,3 @@ td {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  

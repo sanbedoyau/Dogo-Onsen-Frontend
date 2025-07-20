@@ -123,13 +123,13 @@ export default function GestorJabones() {
 
   return (
     <div className="gestor">
-      <div className="gestor__header">
-        <h2>Gestión de Baños</h2>
-        <button className="gestor__add-button" onClick={handleNuevo}>
+      {/* <div className="gestor__header">
+        <h2>Gestión de Baños</h2> */}
+        {/* <button className="gestor__add-button" onClick={handleNuevo}>
           <span style={{ fontSize: "20px", fontWeight: "bold" }}>+</span> Nuevo
-        </button>
-      </div>
-      
+        </button> */}
+      {/* </div> */}
+      <div className="gestor__table-container">
       <table className="gestor__table">
         <thead>
           <tr>
@@ -137,7 +137,7 @@ export default function GestorJabones() {
             <th>Descripción</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th>Acciones</th>
+            <th className="gestor__add-button" onClick={handleNuevo}>+</th>
           </tr>
         </thead>
         <tbody>
@@ -184,7 +184,12 @@ export default function GestorJabones() {
                   <td>{jabon.nombre}</td>
                   <td>{jabon.descripcion}</td>
                   <td>${jabon.precio}</td>
-                  <td>{jabon.imagen}</td>
+                  <td>
+                    <img
+                      src={jabon.imagen}
+                      alt={jabon.nombre}
+                      className="gestor__imagen" />
+                  </td>
                 </>
               )}
               <td>
@@ -204,7 +209,7 @@ export default function GestorJabones() {
           ))}
         </tbody>
       </table>
-
+      </div>
       {showSelector && selectorIndex !== null && (
         <SelectorImagen
           imagenes={imagenesDisponibles}

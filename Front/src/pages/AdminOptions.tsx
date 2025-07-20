@@ -8,6 +8,9 @@ import GestorElementosLimpieza from '../components/AdminOptions/GestorElementosL
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';  // <-- Importa Navbar
+import OptionsButton from "../components/AdminOptions/OptionsButton";
+
+
 
 export default function AdminOptions() {
   const navigate = useNavigate();
@@ -46,6 +49,10 @@ export default function AdminOptions() {
           </ul>
         </div>
         <div className="admin-options__content">
+          <div className="gestor__header">
+            <OptionsButton onSelect={setSelectedOption}/>
+            <h2>{selectedOption}</h2>
+          </div>
           {adminOptions.find(option => option.title === selectedOption)?.component}
         </div>
       </div>

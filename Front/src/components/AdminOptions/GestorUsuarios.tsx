@@ -126,13 +126,13 @@ export default function GestorUsuarios() {
 
   return (
     <div className="gestor">
-      <div className="gestor__header">
+      {/* <div className="gestor__header">
         <h2>Gestión de Baños</h2>
         <button className="gestor__add-button" onClick={handleNuevo}>
           <span style={{ fontSize: "20px", fontWeight: "bold" }}>+</span> Nuevo
         </button>
-      </div>
-      
+      </div> */}
+      <div className="gestor__table-container">
       <table className="gestor__table">
         <thead>
           <tr>
@@ -183,7 +183,13 @@ export default function GestorUsuarios() {
                   <td>{usuario.password}</td>
                   <td>{usuario.nombre}</td>
                   <td>{usuario.tipo}</td>
-                  <td>{usuario.imagen}</td>
+                  <td>
+                    <img
+                      src={usuario.imagen}
+                      alt={usuario.nombre}
+                      className="gestor__imagen" />
+                  </td>
+                  {/* <td>{usuario.imagen}</td> */}
                   <td>{usuario.descripcion}</td>
                   <td>{usuario.rol}</td>
                 </>
@@ -205,6 +211,7 @@ export default function GestorUsuarios() {
           ))}
         </tbody>
       </table>
+      </div>
       {showSelector && selectorIndex !== null && (
         <SelectorImagen
           imagenes={imagenesDisponibles}

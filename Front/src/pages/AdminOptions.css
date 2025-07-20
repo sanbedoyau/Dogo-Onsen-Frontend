@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.navbar{
+    height: 10vh;
+}
 
 .admin-options{
     display: flex;
@@ -12,8 +15,8 @@
     background-size: cover;  
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    /* width: 100vw; */
 }
 
 .admin-options__content{
@@ -29,7 +32,67 @@
     /* padding: 0.5rem 0px 0.5rem 0px */
 
 }
+.gestor__header {
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: space-between; */
+    gap:15px;
+    align-items: center;
+    /* margin-bottom: 1em; */
+    padding: 0 0 1em 0;
+    height: 5%;
+  }
+  
+.admin-options__btn{
+    display: none;
+    position: relative;
+    /* display: inline-block; */
+}
 
+.admin-options__modal-content {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: rgba(186, 200, 209,0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    z-index: 1000;
+    &.open {
+      display: flex;
+      flex-direction: column;
+      animation: aparecer 0.3s ease;
+  }
+}
+.admin-options__modal{
+  display: none;
+  z-index: 2;
+  position: absolute;
+  flex-direction: column;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  margin: 0.5vw 1vw;
+  background-color: #fe5f10a0;
+      &.open {
+    display: flex;
+    animation: aparecer 0.3s ease;
+  }
+
+}
+
+.admin-options__modal-link{
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+} 
+.admin-options__modal-link:hover{
+    background-color: rgba(171, 71, 49, 0.85);
+    color: white;
+}
 .admin-options__sidebar{
     display: flex;
     flex-direction: column;
@@ -40,12 +103,14 @@
     border: 2px solid black;
 
     width: 20%;
-    height: 100%;
+    height: auto;
 
     box-sizing: border-box;
     padding: 0.5rem 0px 0.5rem 0px;
     
     color: rgb(0, 0, 0);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .admin-options__sidebar-title {
@@ -83,7 +148,9 @@
     display: block;
     border-radius: 10px;
 }
-
+i{
+    font-size: 1.5em;
+}
 .admin-options__sidebar-button:hover {
     background-color: rgba(171, 71, 49, 0.85);
     color: white;
@@ -92,4 +159,16 @@
 .admin-options__sidebar-item.logout{
     /* background-color: rgba(192, 49, 24, 0.422); */
     margin-top: auto;
+}
+@media (max-width: 850px) {
+    .admin-options__sidebar{
+        display: none;
+    }
+    .admin-options__btn{
+        display: block;
+    }
+    .admin-options__content{
+        width: 100%;
+    }
+
 }

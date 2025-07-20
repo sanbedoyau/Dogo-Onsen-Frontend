@@ -114,12 +114,12 @@ export default function GestorElementosLimpieza() {
 
   return (
     <div className="gestor">
-      <div className="gestor__header">
-        <h2>Gestión de Baños</h2>
-        <button className="gestor__add-button" onClick={handleNuevo}>
+      {/* <div className="gestor__header">
+        <h2>Gestión de Baños</h2> */}
+        {/* <button className="gestor__add-button" onClick={handleNuevo}>
           <span style={{ fontSize: "20px", fontWeight: "bold" }}>+</span> Nuevo
-        </button>
-      </div>
+        </button> */}
+      {/* </div> */}
 
       <table className="gestor__table">
         <thead>
@@ -127,7 +127,7 @@ export default function GestorElementosLimpieza() {
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
-            <th>Acciones</th>
+            <th className="gestor__add-button" onClick={handleNuevo}>+</th>
           </tr>
         </thead>
         <tbody>
