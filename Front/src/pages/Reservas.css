@@ -26,16 +26,18 @@
 }
 
 .reservas-container ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
   max-width: 1200px;
+  justify-content: center;
 }
 
 .reservas-container li {
+  /* flex:1; */
+  width: 300px;
   background: rgba(255, 232, 214, 0.85);
   border: 2px solid #b03a2e;
   border-radius: 16px;
