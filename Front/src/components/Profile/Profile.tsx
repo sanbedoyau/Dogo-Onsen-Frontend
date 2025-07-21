@@ -5,6 +5,7 @@ import "./Sidebar.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useOutsideInteraction from "../hooks/useOutsideInteraction";
+import bcrypt from "bcryptjs";
 import { API_URL } from "../../lib/api";
 import type { Reserva } from "../../types/reserva";
 import type { Usuario } from "../../types/usuario";
@@ -56,15 +57,23 @@ export default function Profile() {
 
   const handleGuardar = async () => {
     if (!editUser) return;
+    let user = { ...editUser };
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${API_URL}/api/users/${editUser.id}`, {
+
+      if (user.password) {
+        const salt = await bcrypt.genSalt(10);
+        const hashed = await bcrypt.hash(user.password, salt);
+        user = { ...user, password: hashed };
+      }
+
+      const res = await fetch(`${API_URL}/api/users/${user.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(editUser),
+        body: JSON.stringify(user),
       });
 
       if (!res.ok) throw new Error("Error al actualizar perfil");
