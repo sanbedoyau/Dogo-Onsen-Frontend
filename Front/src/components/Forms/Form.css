@@ -30,25 +30,10 @@
     margin: 0 1vw;
 }
 
-.signupForm__basicInfo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
-}
-
-.signupForm__contactInfo {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
-}
-
-.signupForm__password {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
+.signupForm__row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -111,12 +96,13 @@
     .Form {
         width: 30%;
     }
+
+    .signupForm__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
     
     .Form__input {
         width: 100%;
-    }
-
-    .signupForm__basicInfo {
-        flex-wrap: wrap;
     }
 }

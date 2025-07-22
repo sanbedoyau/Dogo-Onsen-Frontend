@@ -8,12 +8,21 @@ export default function SignUpForm() {
 
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
+  const [telefono, setTelefono] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPwd, setConfirmPwd] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+  if (password !== confirmPwd) {
+    setErrorMsg('Las contraseñas no coinciden');
+    setSuccessMsg('');
+    return;
+  }
+
 
     try {
       const res = await fetch(`${API_URL}/api/auth/register`, {
@@ -51,7 +60,7 @@ export default function SignUpForm() {
     <main className='mainForm'>
       <form className='Form' onSubmit={handleSubmit}>
         <h2>Formulario de Registro</h2>
-        <div className='signupForm__basicInfo'>
+        <div className='signupForm__row'>
           <input
             type='text'
             className='Form__input'
@@ -62,7 +71,7 @@ export default function SignUpForm() {
           />
         </div>
 
-        <div className='signupForm__contactInfo'>
+        <div className='signupForm__row'>
           <input
             type='email'
             className='Form__input'
@@ -71,15 +80,31 @@ export default function SignUpForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          <input
+            type='phone'
+            className='Form__input'
+            placeholder='Telefono'
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+            required
+          />
         </div>
 
-        <div className='signupForm__password'>
+        <div className='signupForm__row'>
           <input
             type='password'
             className='Form__input'
             placeholder='Contraseña'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <input
+            type='password'
+            className='Form__input'
+            placeholder='Confirmar contraseña'
+            value={confirmPwd}
+            onChange={(e) => setConfirmPwd(e.target.value)}
             required
           />
         </div>
